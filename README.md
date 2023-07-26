@@ -1,6 +1,6 @@
 # Tob-Taun
 ## Inspilation
-(/images/Seraphine_15.jpg " This is My wife ^.^")
+![This is an alt text.](/images/Seraphine_15.jpg "This is My wife ^.^")
 ### Sw-con
 * Read 1st chapter in Java Book
 ### Data struct
