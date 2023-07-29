@@ -1,12 +1,15 @@
-# Tob-Taun :shipit:
+# Tob-Taun :sunrise_over_mountains: :shipit:
 ## Inspiration
 ![This is picture.](/Images/Seraphine_15.jpg "This is my wife!!!")
-### Software Construction Lecture
+### Software Construction Lecture :city_sunset: :shipit:
 * Read 1st chapter in Java Book On 26/07/2023 :tada:
-### Data struct
+### Data struct :city_sunrise: :shipit:
 * Read 1st chapter in slide On 26/07/2023 :partying_face:
-* Read 2nd chapter in slide[Lecture02_array_65] On 29/07/2023
-<br> - การคำนวณขนาด Array หน้า 14
-<br> - การคำนวณตำแหน่งข้อมูลใน Array ขนาด 1 มิติ หน้า 15 - 18
-### Computer Architecture
+* Read 2nd chapter in slide [Lecture02_array_65] On 29/07/2023 :moyai:
+<br> -> การคำนวณ Array ขนาด 1 มิติ หน้า 14 
+<br> -> การคำนวณหาตำแหน่งข้อมูลใน Array ขนาด 1 มิติ หน้า 15 - 18
+<br> -> การคำนวณ Array ขนาด 2 มิติ หน้า 23 
+<br> -> การคำนวณหาตำแหน่งข้อมูลใน Array ขนาด 2 มิติ หน้า 29 - 32
+<br> -> การคำนวณ Array ขนาด 3 มิติ หน้า 41 (ใน slide ไม่มีการหาตำแหน่ง Array 3 มิติง่ะ) 
+### Computer Architecture :house_with_garden: :shipit:
 * Read 1st chapter in slide On 28/07/2023 :triangular_flag_on_post:
