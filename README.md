@@ -23,7 +23,7 @@
     -> การคำนวณ Array ขนาด 3 มิติ หน้า 41 (ใน slide ไม่มีการหาตำแหน่ง Array 3 มิติง่ะ) 
     ```
 ### Computer Architecture :house_with_garden:
-* Read 1st chapter in slide On 28/07/2023 :triangular_flag_on_post:
+* Read 1st chapter in slide **1 Introduction**On 28/07/2023 :triangular_flag_on_post:
     ```
     -> ยุคสมัยแรกของคอม คอมมีขนาดใหญ่มากเท่าห้องเลย และใช้ vacuum tubes ในการส่งข้อมูล
     -> ยุคสมัยที่สองของคอม มีการใช้ Transitors ในการส่งข้อมูลแทน ทำให้คอมเล็กลง
