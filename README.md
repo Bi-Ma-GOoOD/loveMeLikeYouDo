@@ -1,6 +1,9 @@
 # Tob-Taun :sunrise_over_mountains:
 ## Inspiration :shipit:
+### MY FAVOURITE :musical_score:
 ![This is picture.](/Images/Seraphine_15.jpg "This is my wife!!!")
+### MY WORK :movie_camera:
+![This is picture.](/Images/BiMaGOoOD_car.png "This is my Car-Models in Houdini")
 ### Software Construction Lecture :city_sunset:
 **สิ่งที่อ่านยังไม่ได้อ้างอิงจาก slide อาจารย์โดยตรง แค่ฝึกเขียน Code ตามบทเฉยๆนะงับ สำหรับวิชา Java นะ**
 * Read 1st chapter in Java Book On 26/07/2023 :tada:
@@ -23,7 +26,7 @@
     -> การคำนวณ Array ขนาด 3 มิติ หน้า 41 (ใน slide ไม่มีการหาตำแหน่ง Array 3 มิติง่ะ) 
     ```
 ### Computer Architecture :house_with_garden:
-* Read 1st chapter in slide **1 Introduction**On 28/07/2023 :triangular_flag_on_post:
+* Read 1st chapter in slide **1 Introduction** On 28/07/2023 :triangular_flag_on_post:
     ```
     -> ยุคสมัยแรกของคอม คอมมีขนาดใหญ่มากเท่าห้องเลย และใช้ vacuum tubes ในการส่งข้อมูล
     -> ยุคสมัยที่สองของคอม มีการใช้ Transitors ในการส่งข้อมูลแทน ทำให้คอมเล็กลง
