@@ -36,3 +36,7 @@
     -> ส่วนประกอบคอม Cpu-Mem-In/Out-Bus system
     -> วิธีต่างๆที่สามารถทำให้คอมมีประสิทธิภาพที่มากขึ้น
     ```
+* Read 2nd chapter in slide **2 Components** on 08/08/2023 :rainbow:
+    ```
+    -> บทนี้จะกล่าวเกี่ยวกับ แบบว่า Cpu->ALU-o-Control Unit-o-Register-o-Cache-o-Main Memory-o-I/O Devices
+    ```
