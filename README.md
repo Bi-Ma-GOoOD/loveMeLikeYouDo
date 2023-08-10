@@ -1,9 +1,9 @@
 # Tob-Taun :sunrise_over_mountains:
 ## Inspiration :shipit:
 ### MY FAVOURITE :musical_score:
-![This is picture.](/Images/Seraphine_15.jpg "This is my wife!!!")
+![This is picture.](/Images/Inspiration_n_love/Seraphine_Aquriam.jpg "This is my wife!!!")
 ### MY WORK :movie_camera:
-![This is picture.](/Images/BiMaGOoOD_car.png "This is my Car-Models in Houdini")
+* You can look my work at Images -> My_Beginner_work :beginner:
 ### Software Construction Lecture :city_sunset:
 **สิ่งที่อ่านยังไม่ได้อ้างอิงจาก slide อาจารย์โดยตรง แค่ฝึกเขียน Code ตามบทเฉยๆนะงับ สำหรับวิชา Java นะ**
 * Read 1st chapter in Java Book On 26/07/2023 :tada:
@@ -24,6 +24,11 @@
     -> การคำนวณ Array ขนาด 2 มิติ หน้า 23 
     -> การคำนวณหาตำแหน่งข้อมูลใน Array ขนาด 2 มิติ หน้า 29 - 32
     -> การคำนวณ Array ขนาด 3 มิติ หน้า 41 (ใน slide ไม่มีการหาตำแหน่ง Array 3 มิติง่ะ) 
+    ```
+* Read 3rd chapter in slide **Lecture05-pointer_66** On 10/08/2023 :point_up_2:
+    ```
+    -> เรื่องหลักๆจะเกี่ยวกับ Pointer เป็นหลัก การเอากำหนดค่า เรียกค่า และการใช้ Pointer กับ Array 
+    -> ส่วน 10 หน้าสุดท้ายจะเป็นการอธิบายเกี่ยวกับ การบวก Address 
     ```
 ### Computer Architecture :house_with_garden:
 * Read 1st chapter in slide **1 Introduction** On 28/07/2023 :triangular_flag_on_post:
