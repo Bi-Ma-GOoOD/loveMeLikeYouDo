@@ -9,17 +9,17 @@
 > แนวข้อสอบกลางภาค
 ><br>:question: แนวคำถาม: คืออะไร ทำหน้าที่อะไร ทำงานอย่างไร มีอะไรบ้าง มีความสัมพันธ์กันอย่างไร :question:
 > <br>ประมาณ 10 หัวข้อ จากหัวข้อต่อไปนี้:
->- วิวัฒนาการของระบบคอมพิวเตอร์ :white_check_mark:
->- องค์ประกอบของระบบคอมพิวเตอร์ :white_check_mark:
->- องค์ประกอบของหน่วยประมวลผลกลาง (CPU) :white_check_mark:
->- หน่วยความจำใน CPU (Registers) :white_check_mark:
->- ภาษาแอสเซมบลี (Assembly Language) :white_check_mark:
->- ชุดคำสั่ง (Instruction Set) :white_check_mark:
->- วงจรการทำงานของคำสั่ง (Instruction Cycle) :white_check_mark:
->- สถาปัตยกรรมชุดคำสั่งที่พบบ่อย (Common ISAs) :white_check_mark:
->- วิธีการระบุที่อยู่ (Addressing Modes) :white_check_mark: 
->- ลำดับชั้นหน่วยความจำ (Memory Hierarchy) :white_check_mark:
->- ความใกล้เคียงกันของข้อมูล (Locality) :white_check_mark:
+>- วิวัฒนาการของระบบคอมพิวเตอร์ :heavy_check_mark:
+>- องค์ประกอบของระบบคอมพิวเตอร์ :heavy_check_mark:
+>- องค์ประกอบของหน่วยประมวลผลกลาง (CPU) :heavy_check_mark:
+>- หน่วยความจำใน CPU (Registers) :heavy_check_mark:
+>- ภาษาแอสเซมบลี (Assembly Language) :heavy_check_mark:
+>- ชุดคำสั่ง (Instruction Set) :heavy_check_mark:
+>- วงจรการทำงานของคำสั่ง (Instruction Cycle) :heavy_check_mark:
+>- สถาปัตยกรรมชุดคำสั่งที่พบบ่อย (Common ISAs) :heavy_check_mark:
+>- วิธีการระบุที่อยู่ (Addressing Modes) :heavy_check_mark: 
+>- ลำดับชั้นหน่วยความจำ (Memory Hierarchy) :heavy_check_mark:
+>- ความใกล้เคียงกันของข้อมูล (Locality) :heavy_check_mark:
 >- ผลที่เกิดขึ้นเมื่อมีการร้องขอข้อมูลจากแคช (Cache Events)
 >- คุณสมบัติของหน่วยความจำ (Memory Properties) ที่ต้องรักษาไว้
 >- หน่วยของแคช (Cache Lines, Cache Sets)
@@ -71,6 +71,15 @@
     -> บทนี้จะกล่าวเกี่ยวกับ ลำดับขั้นของความจุต่างๆ ได้แก่ Primary Storage && Secondary Storge
     -> Locality -> Temporal && Spartial
         อ่าน Locality เพิ่มเติมที่ https://pepewitch.medium.com/
+    ```
+* Read 7th chapter of slide **7 Memory Levels** finished 22:15 pm On 13/08/2023 :postbox:
+    ```
+    -> บทนี้จะกล่าวถึงประเภทต่างๆ คือแบบประมาณรูปแบบอะตัวแม่ใหญ่ เช่นแบบ
+        - Register -> Geneal Purpose && Special Purpose
+        - Cache -> L1, L2, L3
+        - SRAM ใช้กับ Regiter & Cache || DRAM ใช้กับ Main Memory
+        - SSD || HDD 
+        - Magnetic Drive && Magnetic Solid State Drive
     ```
 ### Data struct :city_sunrise:
 **Code ที่เห็นอ้างอิงตาม slide ของอาจารย์ทั้งหมด สำหรับวิชา Data-Structure**
