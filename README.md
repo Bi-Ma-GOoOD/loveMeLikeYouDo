@@ -8,25 +8,25 @@
 **Computer Architecture จะมีทั้งหมด 10 สไลด์ที่จะต้องอ่านสอบ**
 > แนวข้อสอบกลางภาค
 > <br>ประมาณ 10 หัวข้อ จากหัวข้อต่อไปนี้:
-- วิวัฒนาการของระบบคอมพิวเตอร์ :white_check_mark:
-- องค์ประกอบของระบบคอมพิวเตอร์   ->1 Introduction [P]
-- องค์ประกอบของหน่วยประมวลผลกลาง (CPU)   ->2 Components [P]
-- หน่วยความจำใน CPU (Registers)   ->2 Components [P]
-- ภาษาแอสเซมบลี (Assembly Language)   ->3 Assembly[P]
-- ชุดคำสั่ง (Instruction Set) ->4 Instruction Set [P]
-- วงจรการทำงานของคำสั่ง (Instruction Cycle) ->4 Instruction Set [P]
-- สถาปัตยกรรมชุดคำสั่งที่พบบ่อย (Common ISAs) ->4 Instruction Set [P]
-- วิธีการระบุที่อยู่ (Addressing Modes)
-- ลำดับชั้นหน่วยความจำ (Memory Hierarchy)
-- ความใกล้เคียงกันของข้อมูล (Locality)
-- ผลที่เกิดขึ้นเมื่อมีการร้องขอข้อมูลจากแคช (Cache Events)
-- คุณสมบัติของหน่วยความจำ (Memory Properties) ที่ต้องรักษาไว้
-- หน่วยของแคช (Cache Lines, Cache Sets)
-- วิธีกำหนดที่อยู่แคช (Cache Placement Policies)
-- วิธีแทนที่แคช (Cache Replacement Policies)
-- วิธีเขียนแคช (Cache Write Policies)
-- ตัววัดประสิทธิภาพแคช (Cache Performance Metrics)
-<br>แนวคำถาม: คืออะไร ทำหน้าที่อะไร ทำงานอย่างไร มีอะไรบ้าง มีความสัมพันธ์กันอย่างไร
+>- วิวัฒนาการของระบบคอมพิวเตอร์ :white_check_mark:
+>- องค์ประกอบของระบบคอมพิวเตอร์ :white_check_mark:
+>- องค์ประกอบของหน่วยประมวลผลกลาง (CPU) :white_check_mark:
+>- หน่วยความจำใน CPU (Registers) :white_check_mark:
+>- ภาษาแอสเซมบลี (Assembly Language) :white_check_mark:
+>- ชุดคำสั่ง (Instruction Set) :white_check_mark:
+>- วงจรการทำงานของคำสั่ง (Instruction Cycle) :white_check_mark:
+>- สถาปัตยกรรมชุดคำสั่งที่พบบ่อย (Common ISAs) :white_check_mark:
+>- วิธีการระบุที่อยู่ (Addressing Modes)
+>- ลำดับชั้นหน่วยความจำ (Memory Hierarchy)
+>- ความใกล้เคียงกันของข้อมูล (Locality)
+>- ผลที่เกิดขึ้นเมื่อมีการร้องขอข้อมูลจากแคช (Cache Events)
+>- คุณสมบัติของหน่วยความจำ (Memory Properties) ที่ต้องรักษาไว้
+>- หน่วยของแคช (Cache Lines, Cache Sets)
+>- วิธีกำหนดที่อยู่แคช (Cache Placement Policies)
+>- วิธีแทนที่แคช (Cache Replacement Policies)
+>- วิธีเขียนแคช (Cache Write Policies)
+>- ตัววัดประสิทธิภาพแคช (Cache Performance Metrics)
+><br>แนวคำถาม: คืออะไร ทำหน้าที่อะไร ทำงานอย่างไร มีอะไรบ้าง มีความสัมพันธ์กันอย่างไร
 * Read 1st chapter in slide **1 Introduction** finished NULL On 28/07/2023 :triangular_flag_on_post:
     ```
     -> ยุคสมัยแรกของคอม คอมมีขนาดใหญ่มากเท่าห้องเลย และใช้ vacuum tubes ในการส่งข้อมูล
