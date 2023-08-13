@@ -7,6 +7,7 @@
 ### Computer Architecture :house_with_garden:
 **Computer Architecture จะมีทั้งหมด 10 สไลด์ที่จะต้องอ่านสอบ**
 > แนวข้อสอบกลางภาค
+><br>:question: แนวคำถาม: คืออะไร ทำหน้าที่อะไร ทำงานอย่างไร มีอะไรบ้าง มีความสัมพันธ์กันอย่างไร :question:
 > <br>ประมาณ 10 หัวข้อ จากหัวข้อต่อไปนี้:
 >- วิวัฒนาการของระบบคอมพิวเตอร์ :white_check_mark:
 >- องค์ประกอบของระบบคอมพิวเตอร์ :white_check_mark:
@@ -16,9 +17,9 @@
 >- ชุดคำสั่ง (Instruction Set) :white_check_mark:
 >- วงจรการทำงานของคำสั่ง (Instruction Cycle) :white_check_mark:
 >- สถาปัตยกรรมชุดคำสั่งที่พบบ่อย (Common ISAs) :white_check_mark:
->- วิธีการระบุที่อยู่ (Addressing Modes)
->- ลำดับชั้นหน่วยความจำ (Memory Hierarchy)
->- ความใกล้เคียงกันของข้อมูล (Locality)
+>- วิธีการระบุที่อยู่ (Addressing Modes) :white_check_mark: 
+>- ลำดับชั้นหน่วยความจำ (Memory Hierarchy) :white_check_mark:
+>- ความใกล้เคียงกันของข้อมูล (Locality) :white_check_mark:
 >- ผลที่เกิดขึ้นเมื่อมีการร้องขอข้อมูลจากแคช (Cache Events)
 >- คุณสมบัติของหน่วยความจำ (Memory Properties) ที่ต้องรักษาไว้
 >- หน่วยของแคช (Cache Lines, Cache Sets)
@@ -26,7 +27,6 @@
 >- วิธีแทนที่แคช (Cache Replacement Policies)
 >- วิธีเขียนแคช (Cache Write Policies)
 >- ตัววัดประสิทธิภาพแคช (Cache Performance Metrics)
-><br>แนวคำถาม: คืออะไร ทำหน้าที่อะไร ทำงานอย่างไร มีอะไรบ้าง มีความสัมพันธ์กันอย่างไร
 * Read 1st chapter in slide **1 Introduction** finished NULL On 28/07/2023 :triangular_flag_on_post:
     ```
     -> ยุคสมัยแรกของคอม คอมมีขนาดใหญ่มากเท่าห้องเลย และใช้ vacuum tubes ในการส่งข้อมูล
@@ -42,18 +42,35 @@
     -> บทนี้จะกล่าวเกี่ยวกับ แบบว่า Cpu->ALU-o-Register-o-Control Unit-o-Cache-o-Main Memory-o-I/O Devices
     -> แล้วก็อธิบายเกี่ยวกับส่วนประกอบของในของแต่ละส่วนคับผม
     ```
-* Read 3rd chapter in slide **3 Assembly** finished 09:40 Am on 13/08/2023 :part_alternation_mark:
+* Read 3rd chapter in slide **3 Assembly** finished 09:40 am on 13/08/2023 :part_alternation_mark:
     ```
     -> บทนี้ช่วงแรกๆจะอธิบายว่า Assembly คืออะไร syntax เป็นยังไง
     -> ช่วงกลางจะเป็นแบบว่า วิธีใช้ วิธีแปลงโค๊ดด้วย symbol tables 
     -> แล้วก็ท้ายสุดก็ ข้อดี ข้อเสีย
     ```
-* Read 4th chapter of slide **4 Instruction Set** finished 15:31 Pm On 13/08/2023 :diamond_shape_with_a_dot_inside:
+* Read 4th chapter of slide **4 Instruction Set** finished 15:31 pm On 13/08/2023 :diamond_shape_with_a_dot_inside:
     ```
     -> ในบทนี้จะบอกว่า Instruction Set มีอะไรบ้างที่แบบ Data tran, Arithmatic.. ก็ว่ากันไป
     -> บอกเกี่ยวกับว่า Instruction format มี 2 แบบคือ fixed ขนาด && Variable (ไม่ fixed)
     -> Insturetion Cycle : fetch->decode->exe->store (loop)
     -> CISC && RISC 
+    ```
+* Read 5th chapter of slide **5 Addressing Modes** finished 17:43 pm On 13/08/2023 :mount_fuji:
+    ```
+    -> ช่วงแรกเขาจะกล่าวถึงว่า Information Set มีอะไรบ้าง
+        - มี Data Tran: Move, Load, Store
+        - มี Arithmatic: Add, ....
+        - มี Logical: And, Or, Compare...
+        - มี Branching: Uncondition, Condition/jne||je, Call Func
+        - มี Machine con: Halt, No Operation, Software Interrupt
+    -> Machine Code ประกอบด้วย Addressing Mode-Opcode-operand 
+    -> แล้วเขาก็จะกล่าวต่อมาว่า ใน Addressing Mode ว่ามีอะไรบ้าง อ่านเอาเองมีทั้งหมด 5 รูปแบบสู้ๆ
+    ```
+* Read 6th chapter of slide **6 Memory-Hierarchy** finished 18:36 pm On 13/08/2023 :sparkles:
+    ```
+    -> บทนี้จะกล่าวเกี่ยวกับ ลำดับขั้นของความจุต่างๆ ได้แก่ Primary Storage && Secondary Storge
+    -> Locality -> Temporal && Spartial
+        อ่าน Locality เพิ่มเติมที่ https://pepewitch.medium.com/
     ```
 ### Data struct :city_sunrise:
 **Code ที่เห็นอ้างอิงตาม slide ของอาจารย์ทั้งหมด สำหรับวิชา Data-Structure**
