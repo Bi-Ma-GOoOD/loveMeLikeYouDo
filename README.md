@@ -6,18 +6,20 @@
 * You can look my work at Images -> My_Beginner_work :beginner:
 ### Computer Architecture :house_with_garden:
 **Computer Architecture จะมีทั้งหมด 10 สไลด์ที่จะต้องอ่านสอบ**
+> แนวข้อสอบ
+> - วิวัฒนาการ :white_check_mark:
 ```
 แนวข้อสอบกลางภาค
     ประมาณ 10 หัวข้อ จากหัวข้อต่อไปนี้:
 
-    - วิวัฒนาการของระบบคอมพิวเตอร์ [P]
-    - องค์ประกอบของระบบคอมพิวเตอร์  [P]
-    - องค์ประกอบของหน่วยประมวลผลกลาง (CPU) [P]
-    - หน่วยความจำใน CPU (Registers) [P]
-    - ภาษาแอสเซมบลี (Assembly Language) [P]
-    - ชุดคำสั่ง (Instruction Set)
-    - วงจรการทำงานของคำสั่ง (Instruction Cycle)
-    - สถาปัตยกรรมชุดคำสั่งที่พบบ่อย (Common ISAs)
+    - วิวัฒนาการของระบบคอมพิวเตอร์   ->1 Introduction [P]
+    - องค์ประกอบของระบบคอมพิวเตอร์   ->1 Introduction [P]
+    - องค์ประกอบของหน่วยประมวลผลกลาง (CPU)   ->2 Components [P]
+    - หน่วยความจำใน CPU (Registers)   ->2 Components [P]
+    - ภาษาแอสเซมบลี (Assembly Language)   ->3 Assembly[P]
+    - ชุดคำสั่ง (Instruction Set) ->4 Instruction Set [P]
+    - วงจรการทำงานของคำสั่ง (Instruction Cycle) ->4 Instruction Set [P]
+    - สถาปัตยกรรมชุดคำสั่งที่พบบ่อย (Common ISAs) ->4 Instruction Set [P]
     - วิธีการระบุที่อยู่ (Addressing Modes)
     - ลำดับชั้นหน่วยความจำ (Memory Hierarchy)
     - ความใกล้เคียงกันของข้อมูล (Locality)
@@ -30,7 +32,7 @@
     - ตัววัดประสิทธิภาพแคช (Cache Performance Metrics)
 แนวคำถาม: คืออะไร ทำหน้าที่อะไร ทำงานอย่างไร มีอะไรบ้าง มีความสัมพันธ์กันอย่างไร
 ```
-* Read 1st chapter in slide **1 Introduction** at NULL On 28/07/2023 :triangular_flag_on_post:
+* Read 1st chapter in slide **1 Introduction** finished NULL On 28/07/2023 :triangular_flag_on_post:
     ```
     -> ยุคสมัยแรกของคอม คอมมีขนาดใหญ่มากเท่าห้องเลย และใช้ vacuum tubes ในการส่งข้อมูล
     -> ยุคสมัยที่สองของคอม มีการใช้ Transitors ในการส่งข้อมูลแทน ทำให้คอมเล็กลง
@@ -40,16 +42,23 @@
     -> ส่วนประกอบคอม Cpu-Mem-In/Out-Bus system
     -> วิธีต่างๆที่สามารถทำให้คอมมีประสิทธิภาพที่มากขึ้น
     ```
-* Read 2nd chapter in slide **2 Components** at NULL on 08/08/2023 :rainbow:
+* Read 2nd chapter in slide **2 Components** finished NULL on 08/08/2023 :rainbow:
     ```
-    -> บทนี้จะกล่าวเกี่ยวกับ แบบว่า Cpu->ALU-o-Control Unit-o-Register-o-Cache-o-Main Memory-o-I/O Devices
+    -> บทนี้จะกล่าวเกี่ยวกับ แบบว่า Cpu->ALU-o-Register-o-Control Unit-o-Cache-o-Main Memory-o-I/O Devices
     -> แล้วก็อธิบายเกี่ยวกับส่วนประกอบของในของแต่ละส่วนคับผม
     ```
-* Read 3rd chapter in slide **3 Assembly** at 09:40 Am on 13/08/2023 :part_alternation_mark:
+* Read 3rd chapter in slide **3 Assembly** finished 09:40 Am on 13/08/2023 :part_alternation_mark:
     ```
     -> บทนี้ช่วงแรกๆจะอธิบายว่า Assembly คืออะไร syntax เป็นยังไง
     -> ช่วงกลางจะเป็นแบบว่า วิธีใช้ วิธีแปลงโค๊ดด้วย symbol tables 
     -> แล้วก็ท้ายสุดก็ ข้อดี ข้อเสีย
+    ```
+* Read 4th chapter of slide **4 Instruction Set** finished 15:31 Pm On 13/08/2023 :diamond_shape_with_a_dot_inside:
+    ```
+    -> ในบทนี้จะบอกว่า Instruction Set มีอะไรบ้างที่แบบ Data tran, Arithmatic.. ก็ว่ากันไป
+    -> บอกเกี่ยวกับว่า Instruction format มี 2 แบบคือ fixed ขนาด && Variable (ไม่ fixed)
+    -> Insturetion Cycle : fetch->decode->exe->store (loop)
+    -> CISC && RISC 
     ```
 ### Data struct :city_sunrise:
 **Code ที่เห็นอ้างอิงตาม slide ของอาจารย์ทั้งหมด สำหรับวิชา Data-Structure**
