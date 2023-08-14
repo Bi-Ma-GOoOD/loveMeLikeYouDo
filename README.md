@@ -20,13 +20,13 @@
 >- วิธีการระบุที่อยู่ (Addressing Modes) :heavy_check_mark: 
 >- ลำดับชั้นหน่วยความจำ (Memory Hierarchy) :heavy_check_mark:
 >- ความใกล้เคียงกันของข้อมูล (Locality) :heavy_check_mark:
->- ผลที่เกิดขึ้นเมื่อมีการร้องขอข้อมูลจากแคช (Cache Events)
->- คุณสมบัติของหน่วยความจำ (Memory Properties) ที่ต้องรักษาไว้
->- หน่วยของแคช (Cache Lines, Cache Sets)
->- วิธีกำหนดที่อยู่แคช (Cache Placement Policies)
->- วิธีแทนที่แคช (Cache Replacement Policies)
->- วิธีเขียนแคช (Cache Write Policies)
->- ตัววัดประสิทธิภาพแคช (Cache Performance Metrics)
+>- ผลที่เกิดขึ้นเมื่อมีการร้องขอข้อมูลจากแคช (Cache Events) :heavy_check_mark:
+>- คุณสมบัติของหน่วยความจำ (Memory Properties) ที่ต้องรักษาไว้ :heavy_check_mark:
+>- หน่วยของแคช (Cache Lines, Cache Sets) :heavy_check_mark:
+>- วิธีกำหนดที่อยู่แคช (Cache Placement Policies) :heavy_check_mark:
+>- วิธีแทนที่แคช (Cache Replacement Policies) :heavy_check_mark:
+>- วิธีเขียนแคช (Cache Write Policies) :heavy_check_mark:
+>- ตัววัดประสิทธิภาพแคช (Cache Performance Metrics) :heavy_check_mark:
 * Read 1st chapter in slide **1 Introduction** finished NULL On 28/07/2023 :triangular_flag_on_post:
     ```
     -> ยุคสมัยแรกของคอม คอมมีขนาดใหญ่มากเท่าห้องเลย และใช้ vacuum tubes ในการส่งข้อมูล
@@ -80,6 +80,37 @@
         - SRAM ใช้กับ Regiter & Cache || DRAM ใช้กับ Main Memory
         - SSD || HDD 
         - Magnetic Drive && Magnetic Solid State Drive
+    ```
+* Read 8th chapter of slide **8 Cache** finished 09:55 am On 14/08/2023 :cactus:
+    ```
+    -> ในช่วงต้นจะกล่าวถึงความหมายของ Cache ว่า แบบเออ Tag ใน Cache จะเก็บที่อยู่จริง(Address) จาก Memory
+    -> Storage Condider มี Locality && Special
+    -> Cache Events มี Cache Hit && Cache Miss
+    -> Memory Properties
+        - Coherences อัปเดตค่า cache ทุกค่าถ้าหากมีการเปลี่ยนแปลง ยกเว้น main memory
+        - Consistency อัปเดตหมด
+    ```
+* Read 9th chapter of slide **9 Cache Organization** finished 13:58 pm On 14/08/2023 :police_car:
+    ```
+    -> Cache Line เป็นหน่วยย่อยของ Cache Set 
+    -> Placement Policies มี 3 ประเภท ได้แก่
+        - Direct Mapped
+        - Set-associative
+        - Fully-associative
+    -> Replacement Policies มี 2 ประเภท ได้แก่
+        - First in , First out
+        - Least Recent Use
+    -> Write Policies
+        - Write through Cpu ส่งอัปเดตค่าทั้งใน Cache และ Mem
+        - Write back Cpu update Cache and Cache update Mem later
+    ```
+* Read 10th chapter of slide **10 Cache Metrics** finished 14:16 pm On 14/08/2023 :musical_note:
+    ```
+    ->Average Memory Access Time = (Cache Hit rate * Hit time)+(Cache Miss rate * Miss penalty)
+        - Cache Hit คือ อัตราการเกิด Cache Hit
+        - Cache Miss คือ อัตราการเกิด Cache Miss
+        - Hit time คือ เวลาที่ Cpu นำข้อมูลหลังจาก เกิด Cache Hit
+        - Miss penalty คือ เวลาที่ Cpu ต้องนำข้อมูลมาจาก Ram เมื่อเกิด Cache Miss
     ```
 ### Data struct :city_sunrise:
 **Code ที่เห็นอ้างอิงตาม slide ของอาจารย์ทั้งหมด สำหรับวิชา Data-Structure**
