@@ -12,7 +12,7 @@
 >- Lecture2_66 :checkered_flag:
 >- Lecture02-array-65 :checkered_flag:
 >- Lecture05-pointer_66 :checkered_flag:
->- Lecture06-struct_66
+>- Lecture06-struct_66 :heavy_check_mark:
 >- Lecture07-function_66
 >- Lecture11-recursion-66
 >- Lecture08_link_list_66
@@ -40,5 +40,12 @@
     -> เรื่องหลักๆจะเกี่ยวกับ Pointer เป็นหลัก การเอากำหนดค่า เรียกค่า และการใช้ Pointer กับ Array 
     -> ส่วน 10 หน้าสุดท้ายจะเป็นการอธิบายเกี่ยวกับ การบวก Address 
     ```
+* Read 4th chapter in slide **Lecture06-struct_66** at 16:04 On 15/08/2023 :full_moon:
+    ```
+    -> บทนี้จะอธิบายเกี่ยวกับ การสร้าง Structure
+    -> การสร้าง Nest Structure
+    -> การใช้ Pointer กับ Structure
+    -> การใช้ Union โดยพื้นที่ของ Union คิดจาก สมาชิกที่ใช้หน่วยความจำมากที่สุด
+    ```
 
-### Data struct :sunrise:
+### Software Construction Lecture :city_sunset:
