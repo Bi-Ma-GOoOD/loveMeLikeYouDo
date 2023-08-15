@@ -8,13 +8,13 @@
 * ถ้าอยากเห็นว่า ประวัติการอ่าน Computer Architecture ให้กด <> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :relaxed:
 ### Data struct :city_sunrise:
 > :question: แนวข้อสอบกลางภาค :question:
-> <br> :laughing: ไม่มีแนวครับ อาศัยทำการบ้านแล้วอ่านบทนั้นเอาสู้ๆ :laughing:
->- WEEK 1:
-<br>HomeWork2
->- WEEK 2:
-<br> Lecture02_array_65
->- WEEK 3:
-<br> Quiz1
+> <br> :fire: ไม่มีแนวครับ อาศัยทำการบ้านแล้วอ่านบทนั้นเอาสู้ๆ :fire:
+>- WEEK 1: :white_check_mark:
+<br>HomeWork2 :heavy_check_mark:
+>- WEEK 2: :white_check_mark:
+<br> Lecture02_array_65 :heavy_check_mark:
+>- WEEK 3: :white_check_mark:
+<br> Quiz1 :heavy_check_mark:
 >- WEEK 4:
 <br> Lecture08_Linked_list_66
 <br> Quiz2
@@ -33,6 +33,17 @@
 <br> Assignment Hashing
 >- WEEK 7:
 <br> Assignment Array
-<br> Binary Search assignment (ทำทีหลัง)
+<br> Binary Search assignment (ทำทีหลัง) </br>
+* Read **Lecture02_array_65** finished 20:29 On 15/08/2023 :calendar:
+    ```
+    -> Array 1 มิติ
+        - การหาจำนวนสมาชิกหรือขนาด Array หาได้จาก Upper - Lower + 1
+        - การหาตำแหน่ง Address หาได้จาก loc A[i] = Base + w*(i-L)
+    -> Array 2 มิติ
+        - การหาจำนวนสมาชิกหรือขนาด Array หาได้จาก (U1-L1+1)*(U2-L2+1)
+        - การหาตำแหน่ง Address มี 2 วิธีได้แก่
+            - หาโดยใช้ Row แถว เป็นหลัก loc A[i][j] = Base + w[C(i-L1)+(j-L2)]
+            - หาโดยใช้ Column หลัก เป็นหลัก loc A[i][j] = Base + w[R(i-L1)+(j-L2)]
 
+    ```
 ### Software Construction Lecture :city_sunset:
