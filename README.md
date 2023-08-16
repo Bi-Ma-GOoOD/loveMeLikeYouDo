@@ -5,7 +5,7 @@
 ### MY WORK :movie_camera:
 * You can look my work at Images -> My_Beginner_work :beginner:
 ### :white_check_mark: Computer Architecture :house_with_garden: status: :white_check_mark:
-* ถ้าอยากเห็นว่า ประวัติการอ่าน Computer Architecture ให้กด <55c14292aba69f9c4ab75d774e46ec95cfdf9c70> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :relaxed:
+* ถ้าอยากเห็นว่า ประวัติการอ่าน Computer Architecture ให้กด <55c1429> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :relaxed:
 ### Data struct :city_sunrise:
 > :question: แนวข้อสอบกลางภาค :question:
 > <br> :fire: ไม่มีแนวครับ อาศัยทำการบ้านแล้วอ่านบทนั้นเอาสู้ๆ :fire:
@@ -25,14 +25,13 @@
 <br> Lecture11-recursion-66
 <br> Exercise factorial หมู่ 1 และ 200
 <br> Exercise recursive
->- WEEK 6:
+>- WEEK 6: :heavy_check_mark:
 <br> Lecture10_search65
 <br> Exercise tail recursion
 <br> Exercise Ackerman function
 <br> Exercise Tower of Hanoi (ทำทีหลังเช่นกัน)
 <br> Assignment Hashing
->- WEEK 7:
-<br> Binary Search assignment (ทำทีหลัง) </br>
+<br> BinarySearch
 * Read **Lecture02_array_65** finished 20:29 On 15/08/2023 :calendar:
     ```
     -> Array 1 มิติ
@@ -63,4 +62,21 @@
         -Multiple คือการเรียกตัวเองหลายครั้งในฟังค์ชันเดียว
     -> แล้วก็ Tower of hanoi
     ```
+* Read **Lecture10_search65** finished 09:49 On 16/08/2023 :sunglasses:
+    ```
+    -> มีกล่าวเกี่ยวกับ Big O นิดหน่อย
+    -> การหาข้อมูลโดยใช้ Binary Search มีระดับเป็น O(log n)
+    -> การหาข้อมูลโดยใช้ Hashing มีระดับเป็น O(1) โดย Hashing อะจะนำข้อมูลไปเป็น Address ซึงมีอยู่ 3 วิธีย่อยคือ 
+        - x mod ขนาดของช่อง Hash ถ้าแบบเลขมี 10 ตัว ก็ mod 11 ประมาณนี้
+        - Mid Square คือ การยกกำลังค่าของ คีย์ เช่น 12 = 144 เอาค่าตรงกลางอย่างเดียว ตอบ 4
+        - Floding การพับ คือเรามีข้อมูลมา แล้วเอามาพับซึ่งจะรู้ได้ไงว่าพับตรงไหน คำตอบ คือ เขาจะบอกหลักสูงสุดมาเองว่า เท่าไร
+    -> การชนกันของข้อมูล มีวิธีแก้ใหญ่ 2 อย่างคือ 
+        1.Open addressing
+            - Linear Probing คือเจอช่องถัดไปถ้าช่องไหนว่างเติมเลย
+            - Double Hashing คือการที่เราจะ Hash อีกรอบแต่รอบนี้คือ x mod ขนาดช่อง + 1
+        2.Chainning 
+            - วิธีแม่งยากเกินไม่รู้จะเขียนโค๊ดยังไงแต่หลักการอะ คือ มึงเติมไปเลยแบบสร้างมาอีกช่องเติมหลังเลยอะ ซ้ำกี่ตัวก็เติมแม่งเท่านั้นแหละ
+
+    ```
+
 ### Software Construction Lecture :city_sunset:
