@@ -5,23 +5,23 @@
 ### MY WORK :movie_camera:
 * You can look my work at Images -> My_Beginner_work :beginner:
 ### :white_check_mark: Computer Architecture :house_with_garden: status: :white_check_mark:
-* ถ้าอยากเห็นว่า ประวัติการอ่าน Computer Architecture ให้กด <> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :relaxed:
+* ถ้าอยากเห็นว่า ประวัติการอ่าน Computer Architecture ให้กด <55c14292aba69f9c4ab75d774e46ec95cfdf9c70> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :relaxed:
 ### Data struct :city_sunrise:
 > :question: แนวข้อสอบกลางภาค :question:
 > <br> :fire: ไม่มีแนวครับ อาศัยทำการบ้านแล้วอ่านบทนั้นเอาสู้ๆ :fire:
->- WEEK 1: :white_check_mark:
+>- WEEK 1: :heavy_check_mark:
 <br>HomeWork2 
->- WEEK 2: :white_check_mark:
+>- WEEK 2: :heavy_check_mark:
 <br> Lecture02_array_65 
->- WEEK 3: :white_check_mark:
+>- WEEK 3: :heavy_check_mark:
 <br> Quiz1 
->- WEEK 4: :white_check_mark:
+>- WEEK 4: :heavy_check_mark:
 <br> Lecture08_Linked_list_66
 <br> Quiz2
 <br> Lecture09_stack_66
 <br> Quiz3
 <br> HomeWork (ไอ้นี่ทำหลังสุดเลย พวกตระกูล Homework เนี่ย)
->- WEEK 5: :white_check_mark:
+>- WEEK 5: :heavy_check_mark:
 <br> Lecture11-recursion-66
 <br> Exercise factorial หมู่ 1 และ 200
 <br> Exercise recursive
