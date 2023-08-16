@@ -10,12 +10,12 @@
 > :question: แนวข้อสอบกลางภาค :question:
 > <br> :fire: ไม่มีแนวครับ อาศัยทำการบ้านแล้วอ่านบทนั้นเอาสู้ๆ :fire:
 >- WEEK 1: :white_check_mark:
-<br>HomeWork2 :heavy_check_mark:
+<br>HomeWork2 
 >- WEEK 2: :white_check_mark:
-<br> Lecture02_array_65 :heavy_check_mark:
+<br> Lecture02_array_65 
 >- WEEK 3: :white_check_mark:
-<br> Quiz1 :heavy_check_mark:
->- WEEK 4:
+<br> Quiz1 
+>- WEEK 4: :white_check_mark:
 <br> Lecture08_Linked_list_66
 <br> Quiz2
 <br> Lecture09_stack_66
@@ -32,7 +32,6 @@
 <br> Exercise Tower of Hanoi (ทำทีหลังเช่นกัน)
 <br> Assignment Hashing
 >- WEEK 7:
-<br> Assignment Array
 <br> Binary Search assignment (ทำทีหลัง) </br>
 * Read **Lecture02_array_65** finished 20:29 On 15/08/2023 :calendar:
     ```
@@ -45,5 +44,14 @@
             - หาโดยใช้ Row แถว เป็นหลัก loc A[i][j] = Base + w[C(i-L1)+(j-L2)]
             - หาโดยใช้ Column หลัก เป็นหลัก loc A[i][j] = Base + w[R(i-L1)+(j-L2)]
 
+    ```
+* Read **Lecture08_Linked_list_66** finished 06:30 On 16/08/2023 bicyclist:
+    ```
+    -> Linklist ตามโค๊ดที่เราฝึกเลยเวลาน้อยไปที่จะฝึกทั้งหมด แต่เอาพื้นฐานก็ถือว่า ได้แล้วนะ ติดแค่ยังเขียนลบไม่ค่อยเป็น
+    ```
+* Read **Lecture09_stack_66** finished 07:25 On 16/08/2023 :slot_machine:
+    ```
+    -> ช่วงแรกๆอะ จะสอนการ pop push แบบ Array ก็ดีนะเดี๋ยวจะเขียนโค๊ดตามไปให้
+    -> ช่วงหลังๆนี่ จะเป็นการแบบ แปลง infix->postfix 
     ```
 ### Software Construction Lecture :city_sunset:
