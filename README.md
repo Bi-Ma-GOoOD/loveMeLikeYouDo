@@ -21,7 +21,7 @@
 <br> Lecture09_stack_66
 <br> Quiz3
 <br> HomeWork (ไอ้นี่ทำหลังสุดเลย พวกตระกูล Homework เนี่ย)
->- WEEK 5:
+>- WEEK 5: :white_check_mark:
 <br> Lecture11-recursion-66
 <br> Exercise factorial หมู่ 1 และ 200
 <br> Exercise recursive
@@ -45,7 +45,7 @@
             - หาโดยใช้ Column หลัก เป็นหลัก loc A[i][j] = Base + w[R(i-L1)+(j-L2)]
 
     ```
-* Read **Lecture08_Linked_list_66** finished 06:30 On 16/08/2023 bicyclist:
+* Read **Lecture08_Linked_list_66** finished 06:30 On 16/08/2023 :bicyclist:
     ```
     -> Linklist ตามโค๊ดที่เราฝึกเลยเวลาน้อยไปที่จะฝึกทั้งหมด แต่เอาพื้นฐานก็ถือว่า ได้แล้วนะ ติดแค่ยังเขียนลบไม่ค่อยเป็น
     ```
@@ -53,5 +53,14 @@
     ```
     -> ช่วงแรกๆอะ จะสอนการ pop push แบบ Array ก็ดีนะเดี๋ยวจะเขียนโค๊ดตามไปให้
     -> ช่วงหลังๆนี่ จะเป็นการแบบ แปลง infix->postfix 
+    ```
+* Read **Lecture11-recursion-66** finished 08:22 On 16/08/2023 :large_blue_circle:
+    ```
+    -> recursion มีทั้งหมด 4 ประเภท ได้แก่
+        -linear คือการเรียกตัวเอง 1 ครั้ง
+        -Tail คือการเรียกตัวเองพร้อมกับส่งผลลัพธ์ ไปเป็น พารามิเตอร์ด้วย
+        -Binary คือการเรียกตัวเองสองครั้งในฟังค์ขันเดียว เช่น  fibonacci
+        -Multiple คือการเรียกตัวเองหลายครั้งในฟังค์ชันเดียว
+    -> แล้วก็ Tower of hanoi
     ```
 ### Software Construction Lecture :city_sunset:
