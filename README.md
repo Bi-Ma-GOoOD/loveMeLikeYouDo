@@ -8,7 +8,7 @@
 * ถ้าอยากย้อนดู ประวัติการอ่าน Computer Architecture ให้กด <-55c1429-> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :relaxed:
 
 ### :white_check_mark: Data struct[Mid-Term] :city_sunrise: status: :white_check_mark:
-* ถ้าอยากเห็นย้อนดู ประวัติการอ่าน Data Structure ให้กด <-b8340ff-> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :rice_scene:
+* ถ้าอยากย้อนดู ประวัติการอ่าน Data Structure ให้กด <-b8340ff-> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :rice_scene:
 
 ### :white_check_mark: Software Construction Lecture[Mid-Term] :city_sunset: status: :white_check_mark:
-* ถ้าอยากเห็นย้อนดู ประวัติการอ่าน Java Lecture ให้กด <-d1b09c0-> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :coffee:
+* ถ้าอยากย้อนดู ประวัติการอ่าน Java Lecture ให้กด <-d1b09c0-> เพื่อดูประวัติ commit เก่าๆได้งับ -O.O- :coffee:
