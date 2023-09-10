@@ -1,0 +1,10 @@
+This file start to test use PrintWriter and BufferedWriter.
+Now I've not lunched yet.
+Written at 12:34 pm by Bi-Ma-GOoOD
+-- Append Test --
+We lost in the cloud.
+
+While I can think. While I can talk.
+While I can stand. While I can walk.
+While I can dream.
+Give my dream come true.

@@ -3,8 +3,8 @@ package InputOutput;
 import java.io.*;
 
 public class ReadFromFile {
-    public static void main(String[] args) {
-        String fileName = "data/test.txt";
+    public static void main(String[] args){
+        String fileName = "data/from-input-user.txt";
         try {
             FileReader fileReader = new FileReader(fileName);
             BufferedReader buffer = new BufferedReader(fileReader);
