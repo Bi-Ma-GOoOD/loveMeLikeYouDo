@@ -1,11 +1,22 @@
-# :seedling: Love-Me-Like-You-Do :sunrise_over_mountains:
-## MID-Term-Test Progress :shipit:
-### MY FAVOURITE :musical_score:
-![This is picture.](/Images/Inspiration_n_love/night.jpg "Day N Night")
-### MY WORK :movie_camera:
-* You can look my work at Art-Work -> My_Beginner_work :beginner:
-### :white_check_mark: <-55c1429-> Computer Architecture[Mid-Term] :house_with_garden: status: :white_check_mark:
-### :white_check_mark: <-b8340ff-> Data struct[Mid-Term] :city_sunrise: status: :white_check_mark:
-### :white_check_mark: <-d1b09c0-> Software Construction Lecture[Mid-Term] :city_sunset: status: :white_check_mark:
-### :white_check_mark: Aids[Mid-Term] :snowflake: status: :white_check_mark:
-* วิชานี้ไม่มีประวัติการอ่านนะงับ เพราะว่า อ่านแค่วันเดียวมีแค่ไฟล์สรุปซึ่งไม่ได้เอาใส่ไว้ให้งับบป๋ม -O.O- :kissing_heart:
+# :crystal_ball: Love-Me-Like-You-Do :sparkles:
+
+## :gift: This All For Final :tada:
+
+### :capricorn: MY FAVOURITE :stars:
+![This is picture.](/Images/Inspiration_n_love/duo.jpg "Go To Dream!")
+
+### :minidisc: MY WORK :thought_balloon:
+* Art-Work -> My_Beginner_work :beginner:
+
+### :hourglass_flowing_sand: Want To Know About Mid-Term <-b714063-> :hourglass_flowing_sand:
+
+### Software Construction Lecture
+* Read 8th chapter in slied **08-io** finished  18:43 On 10/09/2023 :books:
+    ```
+    -> read อ่านทีละตัว ส่วนถ้าใช้ readline อ่านได้เลยทีละบรรทัด ค่าที่อ่านได้เป็น String ทั้งสิ้น ตัวเลขก็เป็น String แต่มีวิธีอ่านเป็นตัวเลขด้วย Integer.parseInt(string) อะไรก็ว่าไป
+    -> มี InputSteamReader/FileReader ใช้อ่านจากหน้าจอ และไฟล์ตามลำดับ
+    -> printWriter/BufferWriter/print&&Buffer ใช้เขียนไฟล์ ความเร็วเรียงจากหน้ามาหลัง ทำงานด้วยกันก็ยิ่งเร็ว
+    -> การปิดไฟล์ สำคัญมาก!!!
+    -> แล้วก็มีการเขียน obj เขียนได้นะ แต่เปิดขึ้นมายังไงไม่รู้ขึ้นมาเป็นรหัส something 
+    -> Serialization[เขียน เป็น Binary] Deserialization อ่าน
+    ```
