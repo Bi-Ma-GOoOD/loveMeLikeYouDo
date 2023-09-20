@@ -1,0 +1,28 @@
+package Exception;
+
+public class BankAccount {
+    private double balance;
+
+    public BankAccount(double balance){
+        this.balance = balance;
+    }
+    public void deposit(double amount){
+        balance += amount;
+    }
+    public void withdraw(double amount) throws NotEnoughMoneyException{
+//        System.out.println("Before throw Exception");
+        if(amount <= 0)
+            throw new IllegalArgumentException("amount must be positive.");
+        if(balance < amount)
+            throw new NotEnoughMoneyException("Cannot withdraw BrOoO.");
+//        System.out.println("After throw Exception");
+        balance -= amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+    @Override
+    public String toString() {
+        return "BankAccount{ " + "Balance }: " + balance;
+    }
+}
