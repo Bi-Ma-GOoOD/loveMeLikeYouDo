@@ -12,49 +12,9 @@
 
 ### Software Construction Lecture :trident:
 * Read 8th chapters in slide **08-I/O** finished  18:43 On 10/09/2023 :books:
-    ```
-    > read อ่านทีละตัว ส่วนถ้าใช้ readline อ่านได้เลยทีละบรรทัด ค่าที่อ่านได้เป็น String ทั้งสิ้น ตัวเลขก็เป็น String แต่มีวิธีอ่านเป็นตัวเลขด้วย Integer.parseInt(string) อะไรก็ว่าไป
-    > มี InputSteamReader/FileReader ใช้อ่านจากหน้าจอ และไฟล์ตามลำดับ
-    > printWriter/BufferWriter/print&&Buffer ใช้เขียนไฟล์ ความเร็วเรียงจากหน้ามาหลัง ทำงานด้วยกันก็ยิ่งเร็ว
-    > การปิดไฟล์ สำคัญมาก!!!
-    > แล้วก็มีการเขียน obj เขียนได้นะ แต่เปิดขึ้นมายังไงไม่รู้ขึ้นมาเป็นรหัส something 
-    > Serialization[เขียน เป็น Binary] Deserialization อ่าน
-    ```
 * Read 9th chapters in slide **09-exception** finished 18:01 On 20/09/2023 :alien:
-    ```
-    > Exception ที่อยู่ในบทนี้ส่วนมากจะเป็น Runtime Error
-    > Exception เป็น subclass ของ superClass ที่ชื่อว่า Thowable ซึ่งอยู่ใต้ Object อีกที
-    > Exception มี 2 ประเภท คือ
-        > Uncheck Exception คือประมาณว่า อันนี้อะมันผิดที่ตัวผู้เขียนโค๊ดเอง คือมึงอะเขียนผิดไอ้สาส เพราะฉะนั้นวิธีแก้ก็คือ ไปหาข้อผิดพลาดของโค๊ดที่มึงเขียนผิดแล้วก็แก้ซะ
-        > Check Exception แต่อันนี้อะ เราไม่ได้เขียนผิดและ แต่มันอาจจะเกิดจากอะไรก็ตามที่เราควบคุมไม่ได้ ซึ่งวิธีแก้ มี 2 วิธี คือ
-            > try/catch
-            > throw ถ้าเรา throw exception ประเภท check เราจำเป็นต้อง declare ตรง method signature แต่ถ้าเป็นประเภท uncheck ไม่จำเป็นต้อง declare ที่ method signature
-            *** throws แบบนี้อะ จะอยู่ที่บริเวณของ method signature ซึ่ง การที่เราจะ declare แบบนี้อะ ต้องเกิดจาก throw ข้างใน catch ก็ได้หรือจะ declare เองเลยก็ได้แล้วแต่ และเราสามารถ declare กี่ exception ก็ได้
-    > การ try/catch catch สามารถมีได้ หลายตัว และ การเรียงลำดับ catch มีความสำคัญ เราควรเอา supclass exception ขึ้น superclass exception ตลอด
-    > printStackTrace() คือไอ้ที่ ปริ้นบอกๆๆๆ หลายๆบรรทัดอะ ที่มันจะเป็นชื่อไฟล์อะนะ อันนั้นเอาไว้ใช้เรียงเพื่อไปหาไฟล์ต้นตอได้ จากล่างสุดไปบนสุด 
-    > การสร้าง exception ถ้าเรา extends Exception ผลลัพธ์ exception ที่่เราจะได้คือ exception ประเภท Check แต่ถ้าเรา extends RuntimeException ผลลัพธ์ exception ที่่เราจะได้คือ exception ประเภท Uncheck
-    > finally จะทำงานเสมอ ต่อให้มี return finally ก็ทำงาน ยกเว้นสิ่งเดียวเท่านั้นที่สามารถหยุด finally ได้ นั่นคือ system.exit(1) ตัวนี้แม่งออกเลย ไม่สนอะไรทั้งนั้น
-    ```
 ### Data structure :zzz:
 * Read 13rd chapters in slide **13-Graph** finished 22:08 On 17/09/2023 :seedling:
-    ```
-    > กราฟมี 2 ประเภท ได้แก่ Directed, Undirected แล้วก็คำศัพท์ที่เกี่ยวข้องของแต่ละกราฟ พวกแบบ end-of-point อะไรก็ว่าไป
-    > การนำเสนอในกราฟ ในรูปแบบต่างๆ มี 2 อย่าง ดังนี้
-        > แสดงกราฟแบบเป็น 2D-Array (Adjacency Matrix)
-        > แสดงกราฟแบบเป็น list (Adjacency List)
-    > แล้วก็มีสอนเขียนโค๊ดด้วยภาษาซี การสร้าง adjacency list
-    ```
+* Read 14th chapters in slide **14-Graph** finished 19:19 On 21/09/2023 :chart_with_upwards_trend:
 ### Computer Architecture :children_crossing:
 * Read 11st chapters in slide **11-Memory Protection** finished 11:40 On 13/09/2023 :hotsprings:
-    ```
-    > Privilege Levels จะกล่าวเกี่ยวกับว่า Privilege มี 2 mode คือ user mode และ kernal mode(Supervisor)
-    > Memory Protection Unit คือ การเช็คข้อมูลว่า สิ่งที่ cpu ร้องขอมา process นี้มีสิทธิ์ที่จะเข้าถึงพื้นที่ไหนบ้าง โดยการตรวจสอบนั้นจะเกิดจาก kernal OS
-        > โดยภายใน memory protection unit(MPU) จะมี segment registers ที่จะคอยเก็บข้อมูลของ process นั้น
-        > ข้อมูลของ process จะถูกแบ่งออกเป็นส่วนๆ เมื่อถูกนำมาเก็บใน segment registers ซึ่ง ถูกแบ่งออกได้ 4 ส่วน ได้แก่ 
-            > DS : Data Segment 
-            > SS : Stack Segment
-            > ES : Extra Segment
-            > CS : Code Segment
-            โดยขนาดของแต่ละ segment นั่นจะถูก fix ไว้แล้ว
-    > Address Space Layout Randomization คือหลักการที่เราจะเปลี่ยนที่อยู่ของข้อมูลตลอด เมื่อเกิดการเข้าถึง โดยใช้ padding นั่นเองงงับ ต่อจากนั่นก็อ่านต่อเองเลย เกริ่นมาแล้ว
-    ```
