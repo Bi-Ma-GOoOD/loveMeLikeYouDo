@@ -18,3 +18,4 @@
 * Read 14th chapters in slide **14-Graph** finished 19:19 On 21/09/2023 :chart_with_upwards_trend:
 ### Computer Architecture :children_crossing:
 * Read 11st chapters in slide **11-Memory Protection** finished 11:40 On 13/09/2023 :hotsprings:
+* Read 12nd chapters in slide **12-Memory Translation** finished 19:30 On 24/09/2023 :ocean:
