@@ -1,5 +1,3 @@
-/*Adjacency Matrix Representation*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
