@@ -186,3 +186,14 @@
 
 ### Data Structure :open_file_folder:
 > * :milky_way: [ANOTHER DIMENSION](#zap-ticking-away--zap) :dizzy:
+* Read 13rd chapters in slides **13-Graphs** finished 15:26 On 22/10/2023 :sleeping:
+    ```
+    เรื่องนี้จะอธิบายเกี่ยวกับ Graph เลยคับว่า เออกราฟมีแบบ 2 ประเภทน้า
+        - กราฟมีทิศทาง
+        - กราฟไม่มีทิศทาง
+        มี Node Edges(เส้นเชื่อม) อะไรประมาณนี้
+    ต่อมาก็จะพูดถึงเรื่องแบบ เออเราสามารถอธิบายกราฟเป็นรูปแบบของ
+        - Matrix
+        - List
+    จบครับบทแรก เรื่องกราฟ
+    ```
