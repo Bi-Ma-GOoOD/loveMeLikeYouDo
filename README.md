@@ -301,3 +301,33 @@
         - C-A.2 : ถ้าหากว่า Z มีลูก เป็น ซ้ายหรือขวาก็ตาม เราจะนำลูกของ Z มาต่อกับ parent ของ Z
         - C-A.3 : ถ้าหากว่า Z มีลูก สอง คน เราจะนำ Successor ของ Z มาต่อแทน
     ```
+* Read 23 rd chapters in slides **23-Heaps** finished 22:11 On 24/10/2023 :fountain:
+    > * :wedding:[Tree-Delete](Data-Structures/R(U)EADY/23-Heaps/)
+    ```
+    --> เรื่องนี้จะสอนเกี่ยวกับ Heap งับ ซึ่ง Heap อะมี 2 คุณสมบัติ ได้แก่
+        - Max-Heap : คือ ล่างสุด อะ คือน้อย แล้วก็บนสุด คือ มากสุด
+        - Min-Heap : คือ ล่างสุด อะ มากสุด ส่วนบนสุด ก็น้อยสุด
+    --> Complexity ส่วนมาก คือ O(log n) งับ
+    ```
+* Read 24 th chapters in slides **24-Sorting** finished 23:09 On 24/10/2023 :mount_fuji:
+    ```
+    --> ในบทนี้จะพูดเกี่ยวกับ พวก Asymtotic อะ เช่น
+        - Big-O Notation
+        - Big-Omega Notation
+        - Big-Theta Notation
+    --> Sorting ที่ดี คือ Sorting ที่มีค่าเท่ากับ Lower-bound
+    --> Inplace Sorts
+        - Insertion Sort : Big-Theta(n) - Big-Theta(n**2)
+        - Selection Sort : Big-Theta(n**2) - Big-Theta(n**2)
+        - Heap Sort : Big-Theta(n log n) - Big-Theta(n log n) เร็วสุด
+        - Bubble Sort : Big-Theta(n) - Big-Theta(n**2)
+        ** วิธีการ sort แนะนำให้ดูในยูทูป นะคับ **
+    ```
+* Read 25 th chapters in slides **25-BalancedBinarySearchTrees** finished 23:28 On 24/10/2023 :stars:
+    > * :golf:[Balance Tree](Data-Structures/R(U)EADY/25-Balanced/)
+    ```
+    --> ใช้ BST ในการ sort
+    --> Complexity of Search Operation on AVL Trees = O(log n)
+    --> คุณสมบัติของ AVL Tree คือ ความแตกต่างของ Left && Right Subtree <= 1
+    --> มีภาพ สอง ภาพในการอธิบายว่า ถ้าหากเกิดการไม่เท่ากัน ของ Left && Right จะทำยังไงงับ
+    ```
