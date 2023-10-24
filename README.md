@@ -237,7 +237,8 @@
     --> Complexity of BFS is O(n)
     --> BFS การันตีเลยว่า เส้นทางที่เขาให้จะเป็นเส้นที่ทางดีที่สุด แต่ DFS ไม่การันตี เพราะฉะนั้น BFS จึงเหมาะกับการใช้หาเส้นทางใน GPS
     ```
-* Read 17th chapters in slides **16-Trees** finished 13:17 On 24/10/2023 :alien:
+* Read 17 && 18 th chapters in slides **17 && 18-Trees** finished 14:19 On 24/10/2023 :tired_face:
+    > * :pensive:[Basic Operation on Ordered Trees by C](Data-Structures/R(U)EADY/17&18-Trees/)
     ```
     ในบทนี้บอกว่า Tree ที่เอามาสอนมีอยู่ 3 ประเภท ได้แก่
         - Free Trees : คือ ต้นไม้ที่เป็น Undirect graph งับ ไม่มี cycle และสมาชิกจะอยู่บนหรือล่างก็ได้ แล้วแต่
