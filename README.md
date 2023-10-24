@@ -287,4 +287,17 @@
         - LeftKey = 2f(v)
         - RightKey = 2f(v) + 1
     -> Basic Operation ทีเห็นมี Complexity = O(1)
+* Read 22 nd chapters in slides **22-BinarySearchTrees** finished 21:21 On 24/10/2023 :fountain:
+    > * :sunrise_over_mountains:[Tree-Delete](Data-Structures/R(U)EADY/22-BinarySearchTree/)
+    ```
+    --> Binary Search Tree : จะเป็น Tree ที่มีการเรียงค่าแล้วนะคับ ว่า ซ้ายต้องน้อยสุด และขวา ต้องมากสุด แต่ว่า ถ้าเป็น Binary Tree ปกติอะ ยังไม่มีอะไร
+        ซึ่งคุณสมบัติที่ผมคิดว่าสำคัญจะมี
+        - BST : ต้องการความสูงต่ำๆ
+        - Successor : คือ node ที่มีค่าตามมาหลังจาก node ที่เราหา
+        - Predecessor : คือ node ที่มีค่าน้อยกว่า node ที่เราหาร
+        ความสูงของ BST จะส่งผลต่อความเร็วในการ search ฉะนั้น = O(h)
+    --> ส่วนต่อไปนี้อะ จะเป็นการลบโหนดใน BST ซึ่งการลบโหนดนั้นเรามี 3 ประเด็นใหญ่ๆ ในการสังเกต
+        - C-A.1 : ถ้าหากว่า Z เป็น External Node เราจะให้ Z เป็น NULL เลย
+        - C-A.2 : ถ้าหากว่า Z มีลูก เป็น ซ้ายหรือขวาก็ตาม เราจะนำลูกของ Z มาต่อกับ parent ของ Z
+        - C-A.3 : ถ้าหากว่า Z มีลูก สอง คน เราจะนำ Successor ของ Z มาต่อแทน
     ```
