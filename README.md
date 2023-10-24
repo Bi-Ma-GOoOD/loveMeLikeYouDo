@@ -216,7 +216,7 @@
         - Adjacency Matrix : มักใช้กับกราฟที่มีความแน่นของเส้นเชื่อมมาก และช้าในการเพิ่มและลบจุดในกราฟ
         - Adjacency List : มักใช้กับกราฟที่มีความแน่นของเส้นเชื่อมน้อย และช้าในการเพิ่มเส้นเชื่อมในกราฟ
     ```
-* Read 15th chapters in slides **15-Graphs** finished 09:06 On 24/10/2023 :sleepy:
+* Read 15th chapters in slides **15-GraphTraversal** finished 09:06 On 24/10/2023 :dizzy_face:
     > * :hankey:[Solution DFS-Depth First Search](Data-Structures/R(U)EADY/15-GraphTraversals/)
     > * :poop:[DFS Implementation by C++](Data-Structures/R(U)EADY/15-GraphTraversals/)
     ```
@@ -229,4 +229,11 @@
     --> ทฤษฎีการเดินทางแล้วยังรู้เส้นทางที่ตัวเองเดินเรียกว่า Tremaux's Algorithm
     --> ตัวอย่างการทำ Depth-Firsh-Search มีให้อยู่ไฟล์โค๊ด และ รูปภาพแล้วงับเป็นการทำ DFS ใน Undirected Graph นะงับ
     --> Complexity of DFS is O(n)
+    ```
+* Read 16th chapters in slides **16-GraphTraversal** finished 11:58 On 24/10/2023 :alien:
+    > * :innocent:[Solution BFS-Breate First Search](Data-Structures/R(U)EADY/16-GraphTraversals/)
+    > * :sunglasses::[BFS Implementation by C++](Data-Structures/R(U)EADY/16-GraphTraversals/)
+    ```
+    --> Complexity of BFS is O(n)
+    --> BFS การันตีเลยว่า เส้นทางที่เขาให้จะเป็นเส้นที่ทางดีที่สุด แต่ DFS ไม่การันตี เพราะฉะนั้น BFS จึงเหมาะกับการใช้หาเส้นทางใน GPS
     ```
