@@ -278,3 +278,12 @@
         - Complete Binary Tree : ส่วนอันนี้อะ คือ ทุกๆ Node มีลูกเต็มหมด ยกเว้นชั้นสุดท้าย
     และถ้าเกิดอยากรู้ว่า ทั้งกราฟนี้มีกี่ Node (2**h+1)-1 ตามนี้เลยงับ
     ```
+* Read 21 st chapters in slides **21-BinaryTrees** finished 20:23 On 24/10/2023 :crying_cat_face:
+    ```
+    --> บทนี้ในช่วงแรกจะกล่าวเกี่ยวกับการเขียนโค๊ด BinaryTrees ด้วยการใช้ Link List Structure แล้วก็มีการแนะนำ Basic Operation เหมือนเดิม ซึ่งพอต่อมาก็มีการเปลี่ยนใหม่ ก็คือ การสร้า BinaryTrees ด้วยการใช้ Array Based
+    --> มีการแนะนำการ Traversal Graph รูปแบบใหม่คือ : Inorder หลักการคือ นับจาก external node ซ้ายสุดมาขวาสุด
+    --> เรื่องต่อมาคือ การเข้าถึง node ที่อยู่ซ้ายหรือขวา ตามหลักของ Array Based นั่นคือ 
+        - LeftKey = 2f(v)
+        - RightKey = 2f(v) + 1
+    -> Basic Operation ทีเห็นมี Complexity = O(1)
+    ```
