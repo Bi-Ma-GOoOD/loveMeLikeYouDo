@@ -323,3 +323,11 @@
         - Bubble Sort : Big-Theta(n) - Big-Theta(n**2)
         ** วิธีการ sort แนะนำให้ดูในยูทูป นะคับ **
     ```
+* Read 25 th chapters in slides **25-BalancedBinarySearchTrees** finished 23:28 On 24/10/2023 :stars:
+    > * :golf:[Balance Tree](Data-Structures/R(U)EADY/25-Balanced/)
+    ```
+    --> ใช้ BST ในการ sort
+    --> Complexity of Search Operation on AVL Trees = O(log n)
+    --> คุณสมบัติของ AVL Tree คือ ความแตกต่างของ Left && Right Subtree <= 1
+    --> มีภาพ สอง ภาพในการอธิบายว่า ถ้าหากเกิดการไม่เท่ากัน ของ Left && Right จะทำยังไงงับ
+    ```
