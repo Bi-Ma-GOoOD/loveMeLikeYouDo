@@ -187,17 +187,46 @@
 ### Data Structure :open_file_folder:
 > * :milky_way: [ANOTHER DIMENSION](#zap-ticking-away--zap) :dizzy:
 * Read 13rd chapters in slides **13-Graphs** finished 15:26 On 22/10/2023 :sleeping:
+    > * :sob:[Adjacency Matrix Code](Data-Structures/R(U)EADY/13-Graph/)
+    > * :joy:[Basic Operation on Adjacency Matrix Graph by C](Data-Structures/R(U)EADY/13-Graph/)
     ```
     เรื่องนี้จะอธิบายเกี่ยวกับ Graph เลยคับว่า เออกราฟมีแบบ 2 ประเภทน้า
-        - กราฟมีทิศทาง
-        - กราฟไม่มีทิศทาง
-        มี Node Edges(เส้นเชื่อม) อะไรประมาณนี้
+        - vertices(nodes) : จุดตัด หรือ จุดในกราฟ
+        - edges(arcs) : เส้นเชื่อม
+    --> กราฟไม่มีทิศทาง(Undirect Graph) : เป็นกราฟที่ประกอบไปด้วยเส้นเชื่อมที่ไม่มีทิศทาง
+        - end-vertices(end point) : มันคือแบบ 1 เส้นเชื่อมที่มีโหนด สอง โหนด
+        - adjacent : มันคือ node ที่มีเส้นเชื่อมต่อกับ node นี้
+        - incident : 1 node มีกี่ edges ที่เชื่อมอยู่
+        - degree : เส้นที่ออกและเข้าจาก node นี้
+    --> กราฟมีทิศทาง(Direct Graph) : เป็นกราฟที่ประกอบไปด้วยเส้นเชื่อมที่มีทิศทาง
+        - origin : จุดเริ่มต้นของ edge
+        - destination : จุดจบของ edge ปลายลูกศร
+        - outgoing edges(out-degree) : เส้นที่พุ่งออกจาก node
+        - incoming edges(in-degree) : เส้นที่พุ่งเข้าหา node
     ต่อมาก็จะพูดถึงเรื่องแบบ เออเราสามารถอธิบายกราฟเป็นรูปแบบของ
         - Matrix
         - List
     จบครับบทแรก เรื่องกราฟ
     ```
 * Read 14th chapters in slides **14-Graphs** finished 22:41 On 22/10/2023 :sleepy:
+    > * :cry:[Adjacency List Code](Data-Structures/R(U)EADY/14-Graph/)
+    > * :revolving_hearts:[Basic Operation on Adjacency List Graph by C++](Data-Structures/R(U)EADY/14-Graph/)
     ```
-    ในบทที่ 14 อะงับ ทั้งคู่เลยนะ ทั้ง 14 แรก กับ 14 อันที่สองจะกล่าวเกี่ยวกับฟังก์ชันที่ใช้ในการสร้างกราฟว่า เออต้องใช้อะไรบ้าง อะไรเป็นพื้นฐานในการสร้างกราฟ ซึ่งผมก็ได้ทำการสร้างไฟล์ตัวอย่างการใช้รวมไปถึงพื้นฐานที่การสร้างกราฟ Adjacency-Matrix && Adjacency List ต้องมีอยู่ในไฟล์ที่ชื่อว่า Basic นะงับ
+    --> ข้อดี และ ข้อเสียของ Graph
+        - Adjacency Matrix : มักใช้กับกราฟที่มีความแน่นของเส้นเชื่อมมาก และช้าในการเพิ่มและลบจุดในกราฟ
+        - Adjacency List : มักใช้กับกราฟที่มีความแน่นของเส้นเชื่อมน้อย และช้าในการเพิ่มเส้นเชื่อมในกราฟ
+    ```
+* Read 15th chapters in slides **15-Graphs** finished 09:06 On 24/10/2023 :sleepy:
+    > * :hankey:[Solution DFS-Depth First Search](Data-Structures/R(U)EADY/15-GraphTraversals/)
+    > * :poop:[DFS Implementation by C++](Data-Structures/R(U)EADY/15-GraphTraversals/)
+    ```
+    --> เรื่องนี้จะอธิบายเกี่ยวกับ การท่องกราฟ ด้วยวิธี DFS(Depth-First-Search) ซึ่งคำที่ประกอบในบทนี้ก็จะมี
+        - Path : เส้นทางของ Node ที่เชื่อมด้วยกัน
+        - Cycle : เส้นเชื่อมที่มากกว่าเท่ากับ 1 เส้นเชื่อมโยงมาหาโหนดเดียวกัน
+        - path's length : ความยาวของเส้นเชื่อม หาได้จาก Node - 1
+        - Connected graph : กราฟที่มี Node ทุก Node เชื่อมโยงถึงกัน
+        - Connected components : แต่ถ้าไม่ได้เชื่อมถึงกัน ทุก Node ก็เรียกคำนี้แหละงับ
+    --> ทฤษฎีการเดินทางแล้วยังรู้เส้นทางที่ตัวเองเดินเรียกว่า Tremaux's Algorithm
+    --> ตัวอย่างการทำ Depth-Firsh-Search มีให้อยู่ไฟล์โค๊ด และ รูปภาพแล้วงับเป็นการทำ DFS ใน Undirected Graph นะงับ
+    --> Complexity of DFS is O(n)
     ```

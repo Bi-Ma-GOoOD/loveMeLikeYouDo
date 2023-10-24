@@ -1,4 +1,4 @@
-/*Basic Operation on Graphs*/
+/*Basic Operation on Adjacency Matrix Graph*/
 
 //createGraph
 //implementation of singly linked list
