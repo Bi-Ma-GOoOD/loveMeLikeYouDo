@@ -237,3 +237,25 @@
     --> Complexity of BFS is O(n)
     --> BFS การันตีเลยว่า เส้นทางที่เขาให้จะเป็นเส้นที่ทางดีที่สุด แต่ DFS ไม่การันตี เพราะฉะนั้น BFS จึงเหมาะกับการใช้หาเส้นทางใน GPS
     ```
+* Read 17th chapters in slides **16-Trees** finished 13:17 On 24/10/2023 :alien:
+    ```
+    ในบทนี้บอกว่า Tree ที่เอามาสอนมีอยู่ 3 ประเภท ได้แก่
+        - Free Trees : คือ ต้นไม้ที่เป็น Undirect graph งับ ไม่มี cycle และสมาชิกจะอยู่บนหรือล่างก็ได้ แล้วแต่
+        - Rooted Trees : ส่วนอันนี้คือ ต้นไม้ที่เป็น Direct graph งับ มีส่วนประกอบของต้นไม้ประเภทนี้ คือ 
+            - Ancestor : จำนวน node ทุกโหนดที่อยู่บน node x 
+            - Descendant : จำนวน node ทุกโหนดที่อยู่ล่าง node x รวมตัวเองด้วยนะ
+            - Subtree : ต้นไม้ย่อย
+            - Parent : คือ โหนดที่อยู่ข้างบน path ก่อน ถึง x นั่นแหละคับ parent
+            - Child : node ที่อยู่ล่าง parent คับ แค่ชั้นเดียวนะ
+            - Siblings : node ที่มี parent คนเดียวกัน
+            - Leaf(External Node) : node ที่ไม่มีลูก
+            - internal Node : node ที่มีลูก
+        ส่วนเรื่องคุณสมบัติ ของ Rooted Trees ก็ได้แก่
+            - Degree : จำนวนลูกของ node นั้นๆ 
+            - Depth : ความสูงนับจากตัวเองขึ้นไปหา Root(r) ให้ตัวเองเป็น 0 นะงับ
+            - Level : มันเป็นแบบ Level ง่ะ Depth ที่เท่ากัน คือ level เดียวกัน 
+            - Height : ความสูงของ node นั้น ก็คือ นับจากตัวเอง ลงไปข้างล่าง หาเส้นที่ยาวที่สุด ให้ตัวเองเป็น 0 นะงับ
+        - Ordered Trees : concept นี้เหมือนกับ Rooted Tree เลย แต่ต่างกันตรงที่ 
+            - Orderd Trees : เรียงค่าจากน้อยไปมาก
+            - Rooted Trees : ไม่ได้เรียงค่า
+    ```
