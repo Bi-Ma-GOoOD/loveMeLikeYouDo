@@ -278,3 +278,26 @@
         - Complete Binary Tree : ส่วนอันนี้อะ คือ ทุกๆ Node มีลูกเต็มหมด ยกเว้นชั้นสุดท้าย
     และถ้าเกิดอยากรู้ว่า ทั้งกราฟนี้มีกี่ Node (2**h+1)-1 ตามนี้เลยงับ
     ```
+* Read 21 st chapters in slides **21-BinaryTrees** finished 20:23 On 24/10/2023 :crying_cat_face:
+    > * :scream_cat:[Basic Operation Using Linked Structure](Data-Structures/R(U)EADY/21-BinaryTree/)
+    ```
+    --> บทนี้ในช่วงแรกจะกล่าวเกี่ยวกับการเขียนโค๊ด BinaryTrees ด้วยการใช้ Link List Structure แล้วก็มีการแนะนำ Basic Operation เหมือนเดิม ซึ่งพอต่อมาก็มีการเปลี่ยนใหม่ ก็คือ การสร้า BinaryTrees ด้วยการใช้ Array Based
+    --> มีการแนะนำการ Traversal Graph รูปแบบใหม่คือ : Inorder หลักการคือ นับจาก external node ซ้ายสุดมาขวาสุด
+    --> เรื่องต่อมาคือ การเข้าถึง node ที่อยู่ซ้ายหรือขวา ตามหลักของ Array Based นั่นคือ 
+        - LeftKey = 2f(v)
+        - RightKey = 2f(v) + 1
+    -> Basic Operation ทีเห็นมี Complexity = O(1)
+* Read 22 nd chapters in slides **22-BinarySearchTrees** finished 21:21 On 24/10/2023 :fountain:
+    > * :sunrise_over_mountains:[Tree-Delete](Data-Structures/R(U)EADY/22-BinarySearchTree/)
+    ```
+    --> Binary Search Tree : จะเป็น Tree ที่มีการเรียงค่าแล้วนะคับ ว่า ซ้ายต้องน้อยสุด และขวา ต้องมากสุด แต่ว่า ถ้าเป็น Binary Tree ปกติอะ ยังไม่มีอะไร
+        ซึ่งคุณสมบัติที่ผมคิดว่าสำคัญจะมี
+        - BST : ต้องการความสูงต่ำๆ
+        - Successor : คือ node ที่มีค่าตามมาหลังจาก node ที่เราหา
+        - Predecessor : คือ node ที่มีค่าน้อยกว่า node ที่เราหาร
+        ความสูงของ BST จะส่งผลต่อความเร็วในการ search ฉะนั้น = O(h)
+    --> ส่วนต่อไปนี้อะ จะเป็นการลบโหนดใน BST ซึ่งการลบโหนดนั้นเรามี 3 ประเด็นใหญ่ๆ ในการสังเกต
+        - C-A.1 : ถ้าหากว่า Z เป็น External Node เราจะให้ Z เป็น NULL เลย
+        - C-A.2 : ถ้าหากว่า Z มีลูก เป็น ซ้ายหรือขวาก็ตาม เราจะนำลูกของ Z มาต่อกับ parent ของ Z
+        - C-A.3 : ถ้าหากว่า Z มีลูก สอง คน เราจะนำ Successor ของ Z มาต่อแทน
+    ```
