@@ -301,3 +301,11 @@
         - C-A.2 : ถ้าหากว่า Z มีลูก เป็น ซ้ายหรือขวาก็ตาม เราจะนำลูกของ Z มาต่อกับ parent ของ Z
         - C-A.3 : ถ้าหากว่า Z มีลูก สอง คน เราจะนำ Successor ของ Z มาต่อแทน
     ```
+* Read 23 nd chapters in slides **23-Heaps** finished 22:11 On 24/10/2023 :fountain:
+    > * :sunrise_over_mountains:[Tree-Delete](Data-Structures/R(U)EADY/22-BinarySearchTree/)
+    ```
+    --> เรื่องนี้จะสอนเกี่ยวกับ Heap งับ ซึ่ง Heap อะมี 2 คุณสมบัติ ได้แก่
+        - Max-Heap : คือ ล่างสุด อะ คือน้อย แล้วก็บนสุด คือ มากสุด
+        - Min-Heap : คือ ล่างสุด อะ มากสุด ส่วนบนสุด ก็น้อยสุด
+    --> Complexity ส่วนมาก คือ O(log n) งับ
+    ```
