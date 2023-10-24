@@ -270,7 +270,7 @@
             - Postorder : O(n)
     *** Tree nodes จะมีแค่ n-1 เส้นเชื่อมเท่านั้น เพราะอีกเส้น คือ Root เราไม่นับนะ ^.^ ***
     ```
-* Read 20 th chapters in slides **20-BinaryTrees** finished 15:37 On 24/10/2023 :kissing_closed_eyes:
+* Read 20 th chapters in slides **20-BinaryTrees** finished 15:37 On 24/10/2023 :pray:
     ```
     ในบทนี้เราจะมากล่าวถึงเรื่อง Binary Trees งับ ซึ่งคำที่ใช้เรียก Binary Tree ก็จะมี
         - proper : คือ คุณมีลูกได้แค่ 0 ไม่ก็ 2 เท่านั้น
