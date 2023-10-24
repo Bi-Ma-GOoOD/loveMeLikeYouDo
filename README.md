@@ -187,17 +187,94 @@
 ### Data Structure :open_file_folder:
 > * :milky_way: [ANOTHER DIMENSION](#zap-ticking-away--zap) :dizzy:
 * Read 13rd chapters in slides **13-Graphs** finished 15:26 On 22/10/2023 :sleeping:
+    > * :sob:[Adjacency Matrix Code](Data-Structures/R(U)EADY/13-Graph/)
+    > * :joy:[Basic Operation on Adjacency Matrix Graph by C](Data-Structures/R(U)EADY/13-Graph/)
     ```
     เรื่องนี้จะอธิบายเกี่ยวกับ Graph เลยคับว่า เออกราฟมีแบบ 2 ประเภทน้า
-        - กราฟมีทิศทาง
-        - กราฟไม่มีทิศทาง
-        มี Node Edges(เส้นเชื่อม) อะไรประมาณนี้
+        - vertices(nodes) : จุดตัด หรือ จุดในกราฟ
+        - edges(arcs) : เส้นเชื่อม
+    --> กราฟไม่มีทิศทาง(Undirect Graph) : เป็นกราฟที่ประกอบไปด้วยเส้นเชื่อมที่ไม่มีทิศทาง
+        - end-vertices(end point) : มันคือแบบ 1 เส้นเชื่อมที่มีโหนด สอง โหนด
+        - adjacent : มันคือ node ที่มีเส้นเชื่อมต่อกับ node นี้
+        - incident : 1 node มีกี่ edges ที่เชื่อมอยู่
+        - degree : เส้นที่ออกและเข้าจาก node นี้
+    --> กราฟมีทิศทาง(Direct Graph) : เป็นกราฟที่ประกอบไปด้วยเส้นเชื่อมที่มีทิศทาง
+        - origin : จุดเริ่มต้นของ edge
+        - destination : จุดจบของ edge ปลายลูกศร
+        - outgoing edges(out-degree) : เส้นที่พุ่งออกจาก node
+        - incoming edges(in-degree) : เส้นที่พุ่งเข้าหา node
     ต่อมาก็จะพูดถึงเรื่องแบบ เออเราสามารถอธิบายกราฟเป็นรูปแบบของ
         - Matrix
         - List
     จบครับบทแรก เรื่องกราฟ
     ```
 * Read 14th chapters in slides **14-Graphs** finished 22:41 On 22/10/2023 :sleepy:
+    > * :cry:[Adjacency List Code](Data-Structures/R(U)EADY/14-Graph/)
+    > * :revolving_hearts:[Basic Operation on Adjacency List Graph by C++](Data-Structures/R(U)EADY/14-Graph/)
     ```
-    ในบทที่ 14 อะงับ ทั้งคู่เลยนะ ทั้ง 14 แรก กับ 14 อันที่สองจะกล่าวเกี่ยวกับฟังก์ชันที่ใช้ในการสร้างกราฟว่า เออต้องใช้อะไรบ้าง อะไรเป็นพื้นฐานในการสร้างกราฟ ซึ่งผมก็ได้ทำการสร้างไฟล์ตัวอย่างการใช้รวมไปถึงพื้นฐานที่การสร้างกราฟ Adjacency-Matrix && Adjacency List ต้องมีอยู่ในไฟล์ที่ชื่อว่า Basic นะงับ
+    --> ข้อดี และ ข้อเสียของ Graph
+        - Adjacency Matrix : มักใช้กับกราฟที่มีความแน่นของเส้นเชื่อมมาก และช้าในการเพิ่มและลบจุดในกราฟ
+        - Adjacency List : มักใช้กับกราฟที่มีความแน่นของเส้นเชื่อมน้อย และช้าในการเพิ่มเส้นเชื่อมในกราฟ
+    ```
+* Read 15th chapters in slides **15-GraphTraversal** finished 09:06 On 24/10/2023 :dizzy_face:
+    > * :hankey:[Solution DFS-Depth First Search](Data-Structures/R(U)EADY/15-GraphTraversals/)
+    > * :poop:[DFS Implementation by C++](Data-Structures/R(U)EADY/15-GraphTraversals/)
+    ```
+    --> เรื่องนี้จะอธิบายเกี่ยวกับ การท่องกราฟ ด้วยวิธี DFS(Depth-First-Search) ซึ่งคำที่ประกอบในบทนี้ก็จะมี
+        - Path : เส้นทางของ Node ที่เชื่อมด้วยกัน
+        - Cycle : เส้นเชื่อมที่มากกว่าเท่ากับ 1 เส้นเชื่อมโยงมาหาโหนดเดียวกัน
+        - path's length : ความยาวของเส้นเชื่อม หาได้จาก Node - 1
+        - Connected graph : กราฟที่มี Node ทุก Node เชื่อมโยงถึงกัน
+        - Connected components : แต่ถ้าไม่ได้เชื่อมถึงกัน ทุก Node ก็เรียกคำนี้แหละงับ
+    --> ทฤษฎีการเดินทางแล้วยังรู้เส้นทางที่ตัวเองเดินเรียกว่า Tremaux's Algorithm
+    --> ตัวอย่างการทำ Depth-Firsh-Search มีให้อยู่ไฟล์โค๊ด และ รูปภาพแล้วงับเป็นการทำ DFS ใน Undirected Graph นะงับ
+    --> Complexity of DFS is O(n)
+    ```
+* Read 16th chapters in slides **16-GraphTraversal** finished 11:58 On 24/10/2023 :alien:
+    > * :innocent:[Solution BFS-Breate First Search](Data-Structures/R(U)EADY/16-GraphTraversals/)
+    > * :sunglasses::[BFS Implementation by C++](Data-Structures/R(U)EADY/16-GraphTraversals/)
+    ```
+    --> Complexity of BFS is O(n)
+    --> BFS การันตีเลยว่า เส้นทางที่เขาให้จะเป็นเส้นที่ทางดีที่สุด แต่ DFS ไม่การันตี เพราะฉะนั้น BFS จึงเหมาะกับการใช้หาเส้นทางใน GPS
+    ```
+* Read 17 && 18 th chapters in slides **17 && 18-Trees** finished 14:19 On 24/10/2023 :tired_face:
+    > * :pensive:[Basic Operation on Ordered Trees by C](Data-Structures/R(U)EADY/17&18-Trees/)
+    ```
+    ในบทนี้บอกว่า Tree ที่เอามาสอนมีอยู่ 3 ประเภท ได้แก่
+        - Free Trees : คือ ต้นไม้ที่เป็น Undirect graph งับ ไม่มี cycle และสมาชิกจะอยู่บนหรือล่างก็ได้ แล้วแต่
+        - Rooted Trees : ส่วนอันนี้คือ ต้นไม้ที่เป็น Direct graph งับ มีส่วนประกอบของต้นไม้ประเภทนี้ คือ 
+            - Ancestor : จำนวน node ทุกโหนดที่อยู่บน node x 
+            - Descendant : จำนวน node ทุกโหนดที่อยู่ล่าง node x รวมตัวเองด้วยนะ
+            - Subtree : ต้นไม้ย่อย
+            - Parent : คือ โหนดที่อยู่ข้างบน path ก่อน ถึง x นั่นแหละคับ parent
+            - Child : node ที่อยู่ล่าง parent คับ แค่ชั้นเดียวนะ
+            - Siblings : node ที่มี parent คนเดียวกัน
+            - Leaf(External Node) : node ที่ไม่มีลูก
+            - internal Node : node ที่มีลูก
+        ส่วนเรื่องคุณสมบัติ ของ Rooted Trees ก็ได้แก่
+            - Degree : จำนวนลูกของ node นั้นๆ 
+            - Depth : ความสูงนับจากตัวเองขึ้นไปหา Root(r) ให้ตัวเองเป็น 0 นะงับ
+            - Level : มันเป็นแบบ Level ง่ะ Depth ที่เท่ากัน คือ level เดียวกัน 
+            - Height : ความสูงของ node นั้น ก็คือ นับจากตัวเอง ลงไปข้างล่าง หาเส้นที่ยาวที่สุด ให้ตัวเองเป็น 0 นะงับ
+        - Ordered Trees : concept นี้เหมือนกับ Rooted Tree เลย แต่ต่างกันตรงที่ 
+            - Orderd Trees : เรียงค่าจากน้อยไปมาก
+            - Rooted Trees : ไม่ได้เรียงค่า
+    ```
+* Read 19 th chapters in slides **19-TreeTraversals** finished 15:02 On 24/10/2023 :kissing_closed_eyes:
+    > * :blush:[How to do pre && post order](Data-Structures/R(U)EADY/19-TreeTraversals)
+    ```
+    ในบทนี้จะมาสอนการทำ pre && post order งับโดยวิธีการเปะ ไว้ให้แล้วเป็นรูปภาพ ส่วนเรื่องของโค๊ดก็มีด้วยเช่นกัน
+    โดย Complexity ของทั้งสองจะแสดงดังด้านล่าง
+        - ทั้งสองใช้วิธีการทำแบบ DFS
+            - Preorder : O(n)
+            - Postorder : O(n)
+    *** Tree nodes จะมีแค่ n-1 เส้นเชื่อมเท่านั้น เพราะอีกเส้น คือ Root เราไม่นับนะ ^.^ ***
+    ```
+* Read 20 th chapters in slides **20-BinaryTrees** finished 15:37 On 24/10/2023 :pray:
+    ```
+    ในบทนี้เราจะมากล่าวถึงเรื่อง Binary Trees งับ ซึ่งคำที่ใช้เรียก Binary Tree ก็จะมี
+        - proper : คือ คุณมีลูกได้แค่ 0 ไม่ก็ 2 เท่านั้น
+        - Full Binary : อันนี้ก็เหมือนกันงับ ทุกๆ Node มีลูกหมดไม่ 0 ก็ 2
+        - Complete Binary Tree : ส่วนอันนี้อะ คือ ทุกๆ Node มีลูกเต็มหมด ยกเว้นชั้นสุดท้าย
+    และถ้าเกิดอยากรู้ว่า ทั้งกราฟนี้มีกี่ Node (2**h+1)-1 ตามนี้เลยงับ
     ```
