@@ -260,3 +260,13 @@
             - Orderd Trees : เรียงค่าจากน้อยไปมาก
             - Rooted Trees : ไม่ได้เรียงค่า
     ```
+* Read 19 th chapters in slides **19-TreeTraversals** finished 15:02 On 24/10/2023 :kissing_closed_eyes:
+    > * :blush:[How to do pre && post order](Data-Structures/R(U)EADY/19-TreeTraversals)
+    ```
+    ในบทนี้จะมาสอนการทำ pre && post order งับโดยวิธีการเปะ ไว้ให้แล้วเป็นรูปภาพ ส่วนเรื่องของโค๊ดก็มีด้วยเช่นกัน
+    โดย Complexity ของทั้งสองจะแสดงดังด้านล่าง
+        - ทั้งสองใช้วิธีการทำแบบ DFS
+            - Preorder : O(n)
+            - Postorder : O(n)
+    *** Tree nodes จะมีแค่ n-1 เส้นเชื่อมเท่านั้น เพราะอีกเส้น คือ Root เราไม่นับนะ ^.^ ***
+    ```
