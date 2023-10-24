@@ -237,7 +237,8 @@
     --> Complexity of BFS is O(n)
     --> BFS การันตีเลยว่า เส้นทางที่เขาให้จะเป็นเส้นที่ทางดีที่สุด แต่ DFS ไม่การันตี เพราะฉะนั้น BFS จึงเหมาะกับการใช้หาเส้นทางใน GPS
     ```
-* Read 17th chapters in slides **16-Trees** finished 13:17 On 24/10/2023 :alien:
+* Read 17 && 18 th chapters in slides **17 && 18-Trees** finished 14:19 On 24/10/2023 :tired_face:
+    > * :pensive:[Basic Operation on Ordered Trees by C](Data-Structures/R(U)EADY/17&18-Trees/)
     ```
     ในบทนี้บอกว่า Tree ที่เอามาสอนมีอยู่ 3 ประเภท ได้แก่
         - Free Trees : คือ ต้นไม้ที่เป็น Undirect graph งับ ไม่มี cycle และสมาชิกจะอยู่บนหรือล่างก็ได้ แล้วแต่
@@ -258,4 +259,14 @@
         - Ordered Trees : concept นี้เหมือนกับ Rooted Tree เลย แต่ต่างกันตรงที่ 
             - Orderd Trees : เรียงค่าจากน้อยไปมาก
             - Rooted Trees : ไม่ได้เรียงค่า
+    ```
+* Read 19 th chapters in slides **19-TreeTraversals** finished 15:02 On 24/10/2023 :kissing_closed_eyes:
+    > * :blush:[How to do pre && post order](Data-Structures/R(U)EADY/19-TreeTraversals)
+    ```
+    ในบทนี้จะมาสอนการทำ pre && post order งับโดยวิธีการเปะ ไว้ให้แล้วเป็นรูปภาพ ส่วนเรื่องของโค๊ดก็มีด้วยเช่นกัน
+    โดย Complexity ของทั้งสองจะแสดงดังด้านล่าง
+        - ทั้งสองใช้วิธีการทำแบบ DFS
+            - Preorder : O(n)
+            - Postorder : O(n)
+    *** Tree nodes จะมีแค่ n-1 เส้นเชื่อมเท่านั้น เพราะอีกเส้น คือ Root เราไม่นับนะ ^.^ ***
     ```
