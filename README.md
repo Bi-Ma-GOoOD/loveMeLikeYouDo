@@ -5,7 +5,7 @@
 > :link: Subject That you can see how we so far ^.^
 > * :book: [Computer Architecture](#computer-architecture-floppy_disk) :pencil2:
 > * :headphones: [Software Construction Lecture](#software-construction-lecture-hotsprings) :notes:
-> * :guitar: [Data Structure](#data-structure-open_file_folder) :microphone:
+> * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102323-date) :microphone:
 
 ### :stars: SEASON OF MIND :snowflake:
 ![This is picture.](/Images/Inspiration_n_love/GODS.jpg "GODS!!!!!")
