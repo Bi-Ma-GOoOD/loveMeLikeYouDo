@@ -24,7 +24,7 @@
 ### Media :pushpin:
 > * :paperclip: [MAMA](#zap-ticking-away--zap) :scissors:
 
-### :white_check_mark: Computer Architecture :floppy_disk: 26/10/2023 :data:
+### :white_check_mark: Computer Architecture :floppy_disk: 26/10/2023 :date:
 > * :sunrise_over_mountains: [IF I CAN DREAM](#zap-ticking-away--zap) :sunrise:
 
 ![This is picture.](/Images/Inspiration_n_love/good.png "YUPiii!!!")
