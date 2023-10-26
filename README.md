@@ -22,12 +22,12 @@
 > * :jack_o_lantern: [MAMAUUU](#zap-ticking-away--zap) :balloon:
 
 ### Media :pushpin:
-> * :paperclip: [MAMA](#zap-ticking-away--zap) :scissors:
+> * :paperclip: [MAMA](#zap-ticking-away--zap) :straight_ruler:
 
 ### :white_check_mark: Computer Architecture :floppy_disk: 26/10/2023 :date:
 > * :sunrise_over_mountains: [IF I CAN DREAM](#zap-ticking-away--zap) :sunrise:
 
-![This is picture.](/Images/Inspiration_n_love/good.png "YUPiii!!!")
+![This is picture.](/Images/Inspiration_n_love/good.png "YUPIII!!!")
 
 ### :white_check_mark: Data Structure :open_file_folder: 25/10/2023 :date:
 > * :milky_way: [ANOTHER DIMENSION](#zap-ticking-away--zap) :dizzy:
