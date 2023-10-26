@@ -3,8 +3,8 @@
 ## :trophy: F-I-N-A-L :sparkles:
 
 > :link: Subject That you can see how we so far ^.^
-> * :white_check_mark: :book: [Computer Architecture](#computer-architecture-floppy_disk) :pencil2:
-> * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102323-date) :microphone:
+> * :white_check_mark: :book: [Computer Architecture](#white_check_mark-computer-architecture-floppy_disk-26102023-date) :pencil2:
+> * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102023-date) :microphone:
 > * :headphones: [Software Construction Lecture](#software-construction-lecture-hotsprings) :notes:
 > * :pill:[AIDS](#aids-ghost) :syringe:
 > * :newspaper:[Media](#media-pushpin) :scissors:
@@ -27,7 +27,7 @@
 ### :white_check_mark: Computer Architecture :floppy_disk: 26/10/2023 :date:
 > * :sunrise_over_mountains: [IF I CAN DREAM](#zap-ticking-away--zap) :sunrise:
 
-![This is picture.](/Images/Inspiration_n_love/good.png "YUPIII!!!")
+![This is picture.](/Images/Inspiration_n_love/good.png "GOOD!!!")
 
 ### :white_check_mark: Data Structure :open_file_folder: 25/10/2023 :date:
 > * :milky_way: [ANOTHER DIMENSION](#zap-ticking-away--zap) :dizzy:
