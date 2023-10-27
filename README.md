@@ -5,8 +5,8 @@
 > :link: Subject That you can see how we so far ^.^
 > * :white_check_mark: :book: [Computer Architecture](#white_check_mark-computer-architecture-floppy_disk-26102023-date) :pencil2:
 > * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102023-date) :microphone:
-> * :headphones: [Software Construction Lecture](#software-construction-lecture-hotsprings) :notes:
-> * :pill:[AIDS](#aids-ghost) :syringe:
+> *  :white_check_mark: :headphones: [Software Construction Lecture](#white_check_mark-software-construction-lecture-hotsprings-27102023-date) :notes:
+> * :white_check_mark: :pill:[AIDS](#white_check_mark-aids-ghost-27102023-date) :syringe:
 > * :newspaper:[Media](#media-pushpin) :scissors:
 
 ### :stars: SEASON OF MIND :snowflake:
@@ -15,21 +15,10 @@
 ### :clubs: MY WORK :spades:
 * My-Work :beginner: [Start Here](Art-Work/My_Beginner_work/) :performing_arts:
 
-### Software Construction Lecture :hotsprings:
-> * :izakaya_lantern: [ROYALTY](#zap-ticking-away--zap) :fireworks:
-
-### AIDS :ghost:
-> * :jack_o_lantern: [MAMAUUU](#zap-ticking-away--zap) :balloon:
-
 ### Media :pushpin:
-> * :paperclip: [MAMA](#zap-ticking-away--zap) :straight_ruler:
+![This is picture.](/Images/Inspiration_n_love/good.png "YEPPP!!!!!")
 
+### :white_check_mark: Software Construction Lecture :hotsprings: 27/10/2023 :date:
+### :white_check_mark: AIDS :ghost: 27/10/2023 :date:
 ### :white_check_mark: Computer Architecture :floppy_disk: 26/10/2023 :date:
-> * :sunrise_over_mountains: [IF I CAN DREAM](#zap-ticking-away--zap) :sunrise:
-
-![This is picture.](/Images/Inspiration_n_love/good.png "GOOD!!!")
-
 ### :white_check_mark: Data Structure :open_file_folder: 25/10/2023 :date:
-> * :milky_way: [ANOTHER DIMENSION](#zap-ticking-away--zap) :dizzy:
-
-![This is picture.](/Images/Inspiration_n_love/good.png "YEP!!!")
