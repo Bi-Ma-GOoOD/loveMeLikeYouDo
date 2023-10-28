@@ -3,10 +3,10 @@
 ## :trophy: F-I-N-A-L :sparkles:
 
 > :link: Subject That you can see how we so far ^.^
-> * :white_check_mark: :book: [Computer Architecture](#computer-architecture-floppy_disk) :pencil2:
-> * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102323-date) :microphone:
-> * :headphones: [Software Construction Lecture](#software-construction-lecture-hotsprings) :notes:
-> * :pill:[AIDS](#aids-ghost) :syringe:
+> * :white_check_mark: :book: [Computer Architecture](#white_check_mark-computer-architecture-floppy_disk-26102023-date) :pencil2:
+> * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102023-date) :microphone:
+> *  :white_check_mark: :headphones: [Software Construction Lecture](#white_check_mark-software-construction-lecture-hotsprings-27102023-date) :notes:
+> * :white_check_mark: :pill:[AIDS](#white_check_mark-aids-ghost-27102023-date) :syringe:
 > * :newspaper:[Media](#media-pushpin) :scissors:
 
 ### :stars: SEASON OF MIND :snowflake:
@@ -15,21 +15,29 @@
 ### :clubs: MY WORK :spades:
 * My-Work :beginner: [Start Here](Art-Work/My_Beginner_work/) :performing_arts:
 
-### Software Construction Lecture :hotsprings:
-> * :izakaya_lantern: [ROYALTY](#zap-ticking-away--zap) :fireworks:
-
-### AIDS :ghost:
-> * :jack_o_lantern: [MAMAUUU](#zap-ticking-away--zap) :balloon:
-
 ### Media :pushpin:
-> * :paperclip: [MAMA](#zap-ticking-away--zap) :scissors:
+> * :ok_hand: [IF I CAN DREAM](#zap-ticking-away--zap) :v:
 
-### :white_check-mark: Computer Architecture :floppy_disk: 26/10/2023 :data:
-> * :sunrise_over_mountains: [IF I CAN DREAM](#zap-ticking-away--zap) :sunrise:
+* :pensive: Lesson 1 :pager:
+    ```
+    - การจด เป็นส่วนนึงในการช่วยจดจำระยะยาว
+    - รูปแบบการเรียนรู้ทางช่องทางออนไลน์ที่นิยม มี
+        - Youtube
+        - Computer
+        - Podcast
+        - Social Media
+    - Crowd Sourcing : การแบ่งปันข้อมูล
+        - Instagram
+        - Facebook
+        - Twitter
+    - กระแสโลกาภิวัฒน์ : ภาวะที่มีข้อมูลสารสนเทศท่วมท้น(Big Data) เกิดจากเทคโนโลยี ที่นำมาใช้กับข้อมูล จนทำให้เกิดการเรียนรู้ด้วยตัวเอง เพราะการหาข้อมูลไม่ได้ยากอีกต่อไป
+    - Data : ข้อมูลดิบ
+    - Information : ข้อมูลที่ถูกตรวจสอบ และผ่านการวิเคราะห์แล้วเรียบร้อย 
+    ```
 
-![This is picture.](/Images/Inspiration_n_love/good.png "YUPiii!!!")
+![This is picture.](/Images/Inspiration_n_love/good.png "YEPPP!!!!!")
 
+### :white_check_mark: Software Construction Lecture :hotsprings: 27/10/2023 :date:
+### :white_check_mark: AIDS :ghost: 27/10/2023 :date:
+### :white_check_mark: Computer Architecture :floppy_disk: 26/10/2023 :date:
 ### :white_check_mark: Data Structure :open_file_folder: 25/10/2023 :date:
-> * :milky_way: [ANOTHER DIMENSION](#zap-ticking-away--zap) :dizzy:
-
-![This is picture.](/Images/Inspiration_n_love/good.png "YEP!!!")
