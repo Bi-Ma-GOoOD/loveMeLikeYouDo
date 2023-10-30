@@ -6,7 +6,7 @@
 > * :white_check_mark: :book: [Computer Architecture](#white_check_mark-computer-architecture-floppy_disk-26102023-date) :pencil2:
 > * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102023-date) :microphone:
 > *  :white_check_mark: :headphones: [Software Construction Lecture](#white_check_mark-software-construction-lecture-hotsprings-27102023-date) :notes:
-> * :white_check_mark: :pill:[AIDS](#white_check_mark-aids-ghost-27102023-date) :syringe:
+> * :white_check_mark: :pill: [AIDS](#white_check_mark-aids-ghost-27102023-date) :syringe:
 > * :newspaper:[Media](#media-pushpin) :scissors:
 
 ### :stars: SEASON OF MIND :snowflake:
@@ -18,7 +18,7 @@
 ### Media :pushpin:
 > * :ok_hand: [IF I CAN DREAM](#zap-ticking-away--zap) :v:
 
-* :pensive: Lesson 1 :pager:
+* :pensive: Lesson 1 **สัปดาห์ที่-4** :pager:
     ```
     - การจด เป็นส่วนนึงในการช่วยจดจำระยะยาว
     - รูปแบบการเรียนรู้ทางช่องทางออนไลน์ที่นิยม มี
@@ -34,7 +34,7 @@
     - Data : ข้อมูลดิบ
     - Information : ข้อมูลที่ถูกตรวจสอบ และผ่านการวิเคราะห์แล้วเรียบร้อย 
     ```
-* :satisfied: Lesson 2 :bath:
+* :satisfied: Lesson 2 **สัปดาห์ที่-5** :bath:
     ```
     - Big Data : การแพร่กระจายของข้อมูลที่เยอะ และรวดเร็วบนโลกอินเตอร์เน็ต
     - สื่อสารสนเทศ มี 4 ประเภท ซึ่งแต่ละประเภทจะถูกนำเสนอใน 2 รูปแบบ
@@ -60,6 +60,25 @@
             - การประเมินสื่อสารสนเทศ
             - การวิเคราะห์ สังเคราะห์ และประมวลผล
             - การใช้สารสนเทศอย่างมีจริยธรรม
+    ```
+* :alien: Lesson 3 **สัปดาห์ที่-8** :scroll:	
+    ```
+    - การสืบค้นแบบพื้นฐาน(Basic Search) เพราะแค่ใส่คำที่เราต้องการที่จะค้นหา จากนั้นกดค้นหาได้เลย เหมาะสำหรับมือใหม่ เช่น Google
+    - การสืบค้นแบบขั้นสูง(Advance Search) เพราะมีการใช้หลักการมาช่วยในการค้นหา 
+    - ขั้นตอนการค้นหาสื่อสารสนเทศ
+        - การกำหนดความต้องการ 
+        - กำรกำหนดคำค้น
+        - การกำหนดกลยุทธ์การค้น
+        - การเลือกเครื่องมือสืบค้น
+        - การสืบค้น
+        - การพิจารณาผลการสืบค้น
+        - การจัดการผลการสืบค้น
+    - ถ้าอยากหาเนื้อหาของเรื่อง ให้ค้นหาโดยการใช้คำค้น ประเภท หัวเรื่อง
+    - Boolean logic
+        - AND : เอาทั้งคู่
+        - OR หรือ เว้นวรรค : เอาอย่างใด อย่างนึง
+        - NOT : อยากได้อย่างใดอย่างนึง เอาตัวไหนไว้ข้างหลัง ตัวนั้นโดดตัดเลย จะไม่มีเนื้อหากับส่วนที่โดน NOT เลย
+
     ```
 
 ![This is picture.](/Images/Inspiration_n_love/good.png "YEPPP!!!!!")
