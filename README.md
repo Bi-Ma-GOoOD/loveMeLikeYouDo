@@ -7,7 +7,7 @@
 > * :white_check_mark: :guitar: [Data Structure](#white_check_mark-data-structure-open_file_folder-25102023-date) :microphone:
 > *  :white_check_mark: :headphones: [Software Construction Lecture](#white_check_mark-software-construction-lecture-hotsprings-27102023-date) :notes:
 > * :white_check_mark: :pill: [AIDS](#white_check_mark-aids-ghost-27102023-date) :syringe:
-> * :newspaper:[Media](#media-pushpin) :scissors:
+> * :newspaper: [Media](#media-pushpin) :scissors:
 
 ### :stars: SEASON OF MIND :snowflake:
 ![This is picture.](/Images/Inspiration_n_love/GODS.jpg "GODS!!!!!")
@@ -81,6 +81,7 @@
     ```
 * :sleeping: Lesson 3-1 **สัปดาห์ที่-9** :mute:
     ```
+    * เนื้อหาในบทนี้จะเกี่ยวกับ การใช้งาน OPAC *
     เริ่มต้นที่ https://www.lib.ku.ac.th/2019/index.php#ku-library-catalog เข้าไปนะ ต่อจากนั้น เราจะสามารถเลือกได้ 8 อย่าง ซึ่งแต่ละอย่างได้แก่
         - AUTHOR(ชื่อผู้แต่ง) : ค้นหาชื่อหนังสือ จากชื่อผู้แต่ง
         - TITLE(ชื่อเรื่อง) : อันนี้คือ ใส่คำค้น จาก ชื่อหนังสือ บทความ หรือ วารสาร ต้องระวังดีๆ เพราะเขาเอามาหมด มันจะไม่ 100 เปอร์ที่จะเป็นเนื้อเรื่องเกี่ยวกับชื่อที่ใส่
@@ -113,6 +114,59 @@
     ```
     อันนี้คือ ขั้นตอนการยืมหนังสือ และ ก่อนจะมาหน้านี้อะ คือ เราต้องกดปุ่ม Request จากหน้าที่แล้วมาก่อนนะ แล้วก็จะมาหน้านี้ กรอกอะไรให้ครบ กด Enter จบ ต่อจากนั้นจะขึ้นที่ สถานภาพของหนังสือ คือ วันเวลา ตามด้วย + 1 เราจะยืมติดต่อกันกี่รอบก็ได้นะ เขาไม่ว่า
     ```
+* :confounded: Lesson 3-3 **สัปดาห์ที่-10** :credit_card:
+    ```
+    * เนื้อหาในบทนี้จะเกี่ยวกับ การค้นหาโดยใช้โปรแกรมบนอินเตอร์เน็ต *
+    - ส่วนเรื่อง การค้นหาฐานข้อมูลออนไลน์ คือ กดเลือกตรง DATA BASE อะ
+    ที่ใช้ EZPROXY เดี๋ยวแปะรูปไว้ให้
+        - มีข้อจำกัดตรงที่ ฐานข้อมูลอื่นๆที่ เกษตรไมได้รองรับไว้อะ จะทำยังไง
+        - แล้วถ้าไม่ใช่นิสิตเกษตรอะกูต้องทำยังไง ฉะนั้นมันเลยต้องไปใช้ Google scholar แทน มันคือ โปรแกรมค้นหาบนอินเตอร์เน็ต คอยทำหน้าที่การสืบค้นเอกสารทางวิชาการที่สามารถอ่านเนื้อหาฉบับเต็มได้
+        - กดเข้าไปเลย https://scholar.google.co.th/
+    - ข้อจำกัดของ OPAC คือ อ่านได้แค่ฉบับย่อๆ อ่านฉบับเต็มไม่ได้
+    ```
+    ![This is picture.](/Images/pra_grob_media/Online-1.jpg "Database KU")
+    ```
+    " การค้นหาฐานข้อมูลแบบออนไลน์ จาก Ezproxy "
+    - สามารถนำ เมาส์มาเลือกที่ Banner ได้เลย Banner ก็คือ ไอ้ที่เป็นสัญลักษณ์อะ
+    ```
+    ![This is picture.](/Images/pra_grob_media/Online-3.jpg "Result Search")
+    ```
+    - ใช้เทคนิก Boolean Logic ได้เลย
+    ส่วนประกอบในหน้านี้มี
+        - ผลลัพธ์ทั้งหมด 163,536 ผลลัพธ์
+        - และสามารถเลือกประเภทของการค้นหาหนังสือ ได้เป็นว่า จะเอาวารสาร บทความ หรืออะไร ได้ที่ Article Type
+        - Export คือเหมาะสำหรับ การนำเรื่องที่เราเลือกมาใช้อ้างอิง
+        - Relavance คือ คล้ายๆ การ sort อะไรสักอย่าง เช่น วันที่ หรืออื่นๆ
+        - Download คือ การโหลดเรื่องที่เราเลือกต้องการจะโหลด ซึ่งออกมาเป็นไฟล์ zip
+    ```
+    ![This is picture.](/Images/pra_grob_media/Online-4.jpg "Book Review")
+    ```
+    - อันนี้คือ ภาพที่เกิดจากการเลือก หัวข้อเรื่องใดเรื่องนึงจากภาพบน
+    - ซึ่งจากภาพตัวอย่างที่เรายกมา
+        - ถ้าเป็นสือประเภท วารสาร
+            - Volumn : บ่งบอกถึงปีที่เท่าไรของวารสาร
+            - Issue : ฉบับที่เท่าไรและประจำเดือนอะไรปีอะไร
+            - Pages : คือการบอกว่าบทความนี้ตั้งแต่หน้าไหน ถึง หน้าไหน
+            - ชื่อของวารสาร : The Egyptian Rheumatologist
+            - ชื่อของบทความ : Frequency of fibromyalgia syndrome and anxiety post-corona virus disease-2019 (COVID-19) in patients attending the rheumatology clinic ที่อยู่ใน วารสารของเล่มนี้
+            - จำนวนผู้แต่ง : 4 คน
+        - ถ้าเป็นสื่อประเภท หนังสือ
+            - สังเกตุหาคำว่า ISBN เลย เพราะมันบ่งบอกถึงรหัสประจำหนังสือ 
+            ส่วน ISSN คือ รหัสประจำวารสารใช้สังเกตุได้เช่นกัน
+    ```
+    ![This is picture.](/Images/pra_grob_media/Scholar-1.jpg "Search Review")
+    ```
+    " การค้นหาฐานข้อมูลแบบอินเตอร์เน็ต โดยใช้ Google Scholar "
+    - ใช้เทคนิก Boolean Logic ได้เลย
+    - อ้างโดย : ถูกนำไปอ้างอิงเท่าไรแล้ว มีความนิยมมากแค่ไหน
+    - บทความที่เกี่ยวข้อง : ประมาณว่า เราอยากได้บทความอื่นๆ ที่เกี่ยวข้องกับบทความที่เราอ่านอยู่อะ มีไหม
+    - ทั้งหมดกี่ฉบับ : ถูกนำไปดัดแปลงเป็นเอกสารต่างๆ เช่น ทำ Inforgraphic หรืออื่นๆ
+    ```
+    ![This is picture.](/Images/pra_grob_media/Scholar-2.jpg "Book Review")
+    ```
+    - หน้าที่หลังจากที่เรื่องหัวข้อหนังสือ ประมาณนี้ อยากให้เห็นความแตกต่างระหว่าง Online กับ Scholar เวลาเราเลือกหัวข้อหนังสือแล้ว
+    ```
+
 ![This is picture.](/Images/Inspiration_n_love/good.png "YEPPP!!!!!")
 
 ### :white_check_mark: Software Construction Lecture :hotsprings: 27/10/2023 :date:
