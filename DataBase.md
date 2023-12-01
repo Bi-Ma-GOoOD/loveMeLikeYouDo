@@ -1,11 +1,17 @@
 # :scroll: SQL-Data-Base :books:
 ## :clipboard: Basic-Commands :pushpin:
 
+> :link: Data-Base ~ ~ ~
+> * :scroll: [SQL](#sql-scroll) :scroll:
+> * :page_with_curl: [My SQL](#my-sql-page_with_curl) :page_with_curl:
+> * :globe_with_meridians: [ORACLE](#oracle-globe_with_meridians) :globe_with_meridians:
+
 ### :fire: Fire!!! :fire:
 ![This is picture.](/Images/Inspiration_n_love/Napoleon.jpg "Go Go Go")
 
 > * :hand: [Begin](#scroll-sql-data-base-books) :point_right:
 
+### SQL :scroll:
 * :shipit: **SELECT** :octocat:
     ```
     - SELECT column1, column2, ... 
@@ -137,3 +143,20 @@
     SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
     WHERE CustomerID = 1;
     ```
+* :heavy_exclamation_mark: **DELETE Statement** :bangbang:
+    ```
+    - DELETE Syntax
+    DELETE FROM table_name
+    WHERE condition;
+    > Ex.
+    DELETE FROM Customers 
+    WHERE CustomerName='Alfreds Futterkiste';
+    - DELETE FROM table_name
+    > ถ้าเราใช้แค่คำสั่งนี้อะ มันจะเป็นการลบทุก Record เลยเหลือแค่ Field ของตารางเฉยๆ
+    - DROP TABLE table_name
+    > อันนี้คือ ลบทั้งตารางไม่เหลืออะไรเลย
+    ```
+### MY SQL :page_with_curl:
+> * :circus_tent: [Go Back](#scroll-sql-data-base-books) :bomb:
+### ORACLE :globe_with_meridians:
+> * :earth_africa: [Go Back](#scroll-sql-data-base-books) :earth_americas:
