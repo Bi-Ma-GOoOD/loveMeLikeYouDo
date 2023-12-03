@@ -142,6 +142,7 @@
     UPDATE Customers
     SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
     WHERE CustomerID = 1;
+    > คือ อันนี้อะถ้าสมมติว่าตารางนั้นมี Field ทั้งหมด 5 ช่อง แล้วเราใส่ข้อมูลไม่ครบอะ ช่องนั้นจะแสดงว่า NULL นะ
     ```
 * :heavy_exclamation_mark: **DELETE Statement** :bangbang:
     ```
