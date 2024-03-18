@@ -7,7 +7,7 @@
 > * :open_file_folder: [Virtual-Memory](#virtual-memory-management-post_office):card_index_dividers:
 > * :card_file_box: [File-System](#file-system-briefcase) :file_cabinet:
 > * :paintbrush: [I/O](#io-memo) :crayon:
-> * [Security]
+> * :dagger: [Security](#security-shield) :crossed_swords:
 
 ### :zap: Baby We're :zap:
 ![This is picture.](/Images/Inspiration_n_love/GODS.jpg "Go Go GOD!!!")
@@ -290,4 +290,42 @@
         - Average Seek Time : หาได้จาก ผลรวมของ(ผลค่างระหว่าง Track * เวลาที่ใช้ข้าม Track)/ จำนวน Disk request 
         - Error Handing : คำนี้หมายความว่า ในทุกๆ Track อะคับ จะมี sector ที่ว่าง เราเรียกว่า "Spare Sector" ซึ่งถามว่าแล้วทำไมต้องมี
             เหตุผล เนื่องจากว่าถ้าหากในกรณีที่มี sector ใด sector นึงที่ไม่สามารถเขียนหรืออ่านไฟล์ได้ ซึ่ง sector นั้นเราจะเลือกว่า "Bad sector" และเมื่อเกิดเหตุการณ์นั้นเราจำเป็นที่จะต้องเกิดการ replace sector ซึ่งเราจะเลือก replace ใส่ในช่องที่เป็น spare sector นั่นเอง ต่อจากนั้น อาจจะมีการ Shift หรือจะปล่อยไว้ก็ได้ แต่ถ้าหาก system มีการเข้าถึงแบบ sequential shift จะเป็นสิ่งที่ดีกว่า
+```
+
+### Security :shield:
+> * :crystal_ball: [Teleport](#crown-place-it-a-top-my-own-hand-crown) :milky_way:
+```
+    > หน้า(01-16)
+        - จะกล่าวเกี่ยวกับว่าเป้าหมายของการรักษาความปลอดภัยของระบบอะ ที่สำคัญๆมีอะไรบ้าง ซึ่งตามเป้าหมายจริงๆ มี 3 อย่าง ได้แก่
+            1. Confidentiality : ความลับของข้อมูล
+            2. Integrity : ความตรงกันของข้อมูล
+            3. Availability : การเข้าใช้งานได้อย่างถูกต้องตามสิทธิ
+        - Computer asset มี 4 อย่าง ได้แก่ Hardware, Software, data, network
+        - ภัยคุกคามต่อ Security goal มี 4 อย่าง ได้แก่
+            1. Interrupts : การกีดกันข้อมูล
+            2. Interception : การถูกแย่งข้อมูล
+            3. Modification : คือ การถูกแย่งแล้ว นอกจากจะแย่งไปแล้วอะ แม่งยังมีการแก้ไขอีก
+            4. Fabrication : สร้างสิ่งแปลกปลอมขึ้นมาเพื่อหลอกอะไรบางอย่างจากปลายทาง
+        - ภัยคุกคามในมุมมองของ Computer asset ได้แก่ 
+            Hardware : จงใจทำให้เกิดความเสียหาย
+            Software : ไปลบ เปลี่ยนแปลง หรือทำให้ไฟล์ได้รับความเสียหาย ซึ่งวิธีแก้ อาจจะใช้การ Backup File
+            Data : เปลี่ยนแปลงข้อมูลทำให้ไม่เหมือนเดิม
+            Network แบ่งได้อีก 2 ประเภท คือ
+                Passive Attack : ดักฟัง
+                Active Attack : แทรกแซงเพื่อทำให้เกิดความเสียหาย
+        - Access Matrix ดูหน้า(23)
+            Subject : entity ที่จะไปเข้าถึง
+            Object : entity ที่ถูกเข้าถึงจาก Subject
+            Access rights : สิทธิในแต่ละ object ว่า subject สามารถทำอะไรได้บ้าง
+            จะสามารถสังเกตได้ว่า Access Matrix มีการใช้ที่ไม่เต็มพื้นที่เพราะยังเหลือช่องว่างอยู่ทำให้ เกิดอีก 2 แนวทาง คือ
+                1. ACL(Access Control List) เอามาแต่คอลัมน์ ดูหน้า(25)
+                2. Capability Tickets เอามาแต่แถวแนวนอนอะ ดูหน้า(27)
+        - เทคนิคที่ผู้บุกรุกมักจะใช้เพื่อที่จะได้รหัสของเรา ดูหน้า(29-30)
+        - user จะได้รับสิทธิ์การใช้งานของตนได้ก็ต่อเมื่อมีการแสดง user_id ของเราในการเข้าถึงไฟล์ข้อมูลต่างๆ
+        - การสร้าง password อย่างมีคุนตะภาพ ดูหน้า(34-36)
+        - การตรวจจับผู้บุกรุก ส่วนมากมันแบบสังเกตจากพวกพฤติกรรมการใช้งานของ user กับ ผู้บุกรุกอะ ถ้าแบบ user เข้าค่ายก็คือ รู้เลยว่า Activity มันเปลี่ยนไป เพราะ Os จะเก็บทุกอย่างที่เราทำ และเนื่องจาก os เก็บทุก Activity ซึ่งมันกินพื้นที่สูง เราเลยกำหนดแค่ scope ที่จะเก็บก็พอ
+        - Malicious Programs : Malware ดูหน้า(42)
+        - Trustes System : ระดับความปลอดภัยของผู้ใช้งาน
+            No read up: ผู้ใช้ ไม่สามารถอ่านข้อมูล ระดับที่สูงกว่าระดับของตน
+            No write down : ผู้ใช้ ไม่สามารถเขียนข้อมูล ลงในระดับที่ต่ำกว่าระดับของตน
 ```
