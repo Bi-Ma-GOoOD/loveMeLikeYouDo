@@ -4,7 +4,7 @@
 
 int main(){
     //Declare variables
-    char dukkha_buff[256], samudaya_buff[256], nirodha_buff[256], magga_buff[256], name[16], choice[4], choice_2[4];
+    char buff[256], name[16], choice[4], choice_2[4];
     //Input
     printf("Ariyasacca : Hello my name is Ariyasacca.\n");
     sleep(2);
@@ -28,27 +28,31 @@ int main(){
             printf("Ariyasacca : What is your suffering? %s?\n", name);
             printf("%s : ", name);
             fflush(stdin);
-            scanf("%s", dukkha_buff);
+            scanf("%s", buff);
             sleep(2);
             printf("Ariyasacca : And, what is the cause of suffering?\n");
             printf("%s : ", name);
             fflush(stdin);
-            scanf("%s", samudaya_buff);
+            scanf("%s", buff);
             sleep(2);
             printf("Ariyasacca : Then, What is your result if you get out of your suffering?\n");
             printf("%s : ", name);
             fflush(stdin);
-            scanf("%s", nirodha_buff);
+            scanf("%s", buff);
             sleep(2);
             printf("Ariyasacca : Finally, What is the path to make get out of suffering and happy ^.^\n");
             printf("%s : ", name);
             fflush(stdin);
-            scanf("%s", magga_buff);
+            scanf("%s", buff);
             sleep(2);
             printf("Ariyasacca : Feel better ????\n");
-            printf("%s : yesssss O.O\n", name);
+            printf("%s : ", name);
+            fflush(stdin);
+            scanf("%s", buff);
             printf("Ariyasacca : Hahaha. I hope you enjoy and happay all day. Thank you to talk with me goodbyeeee.\n");
-            printf("%s : good byeeee.", name);
+            printf("%s : ", name);
+            fflush(stdin);
+            scanf("%s", buff);
         }else if(choice_2[0] == 'N' || choice_2[0] == 'n'){
             printf("Ariyasacca : I hope you enjoy and happay all day good byeeeee ^.^");
 
@@ -62,27 +66,31 @@ int main(){
         printf("Ariyasacca : What is your suffering? %s?\n", name);
         printf("%s : ", name);
         fflush(stdin);
-        scanf("%s", dukkha_buff);
+        scanf("%s", buff);
         sleep(2);
         printf("Ariyasacca : And, what is the cause of suffering?\n");
         printf("%s : ", name);
         fflush(stdin);
-        scanf("%s", samudaya_buff);
+        scanf("%s", buff);
         sleep(2);
         printf("Ariyasacca : Then, What is your result if you get out of your suffering?\n");
         printf("%s : ", name);
         fflush(stdin);
-        scanf("%s", nirodha_buff);
+        scanf("%s", buff);
         sleep(2);
         printf("Ariyasacca : Finally, What is the path to make get out of suffering and happy ^.^\n");
         printf("%s : ", name);
         fflush(stdin);
-        scanf("%s", magga_buff);
+        scanf("%s", buff);
         sleep(2);
         printf("Ariyasacca : Feel better ????\n");
-        printf("%s : yesssss O.O\n", name);
+        printf("%s : ", name);
+        fflush(stdin);
+        scanf("%s", buff);
         printf("Ariyasacca : Hahaha. I hope you enjoy and happay all day. Thank you to talk with me goodbyeeee.\n");
-        printf("%s : good byeeee.", name);
+        printf("%s : ", name);
+        fflush(stdin);
+        scanf("%s", buff);
     }else{
         printf("Ariyasacca : I don't understand this command TT. You can call me later. TT");
     }
