@@ -1,0 +1,5 @@
+print("Hello")
+print('World!')
+print("Phophency : He is coming ~ ~ ~")
+print("Light : Who")
+print("Phophency : 'Viego'")
