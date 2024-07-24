@@ -114,6 +114,7 @@ def my_init():
     glClearColor(0.2, 0.8, 0.8, 1)
     df = pd.read_csv("D:\\AB-BiMaGOoOD\\Tob-taun\\3rdYears\\Y3T1\\ICG\\Week03\\ashtray.tri", sep='\s+', comment='#',
                      header=None, dtype=np.float32)
+    print(df)
     centroid = df.values[:, 0:3].mean(axis=0)
     bbox = df.values[:, 0:3].max(axis=0) - df.values[:, 0:3].min(axis=0)
 
