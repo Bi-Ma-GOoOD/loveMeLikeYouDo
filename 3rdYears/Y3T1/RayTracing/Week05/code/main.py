@@ -89,7 +89,7 @@ def renderPointLight():
     main_camera.aspect_ratio = 1.0
     main_camera.img_width = 400
     main_camera.center = rtu.Vec3(0,0,0)
-    main_camera.samples_per_pixel = 5
+    main_camera.samples_per_pixel = 10
     main_camera.max_depth = 4
     main_camera.vertical_fov = 90
     main_camera.look_from = rtu.Vec3(0, 0, 10)
@@ -135,7 +135,7 @@ def renderPointLightShadow():
     main_camera.aspect_ratio = 1.0
     main_camera.img_width = 400
     main_camera.center = rtu.Vec3(0,0,0)
-    main_camera.samples_per_pixel = 10
+    main_camera.samples_per_pixel = 1
     main_camera.max_depth = 4
     main_camera.vertical_fov = 90
     main_camera.look_from = rtu.Vec3(0, 0, 10)
@@ -180,7 +180,7 @@ def renderMyScene():
     main_camera.aspect_ratio = 1.0
     main_camera.img_width = 400
     main_camera.center = rtu.Vec3(0,0,0)
-    main_camera.samples_per_pixel = 100
+    main_camera.samples_per_pixel = 20
     main_camera.max_depth = 3
     main_camera.vertical_fov = 90
     main_camera.look_from = rtu.Vec3(0, 0, 10)
@@ -197,9 +197,9 @@ def renderMyScene():
     upper_golden_yellow = rtm.Lambertian(rtu.Color(1.0, 0.85, 0.0))
     lower_Terracotta = rtm.Lambertian(rtu.Color(0.8, 0.4, 0.2))
     #Adding spheres
-    sphere_sage_green = rtm.Lambertian(rtu.Color(0.7, 0.85, 0.6))
-    sphere_lavender = rtm.Lambertian(rtu.Color(0.9, 0.8, 0.1))
-    sphere_white = rtm.Lambertian(rtu.Color(1, 1, 1))
+    sphere_red = rtm.Lambertian(rtu.Color(0.75, 0.04, 0.04))
+    sphere_yellow = rtm.Lambertian(rtu.Color(1, 0.77, 0))
+    sphere_green = rtm.Lambertian(rtu.Color(0.4, 0.71, 0.25))
     #Adding lights
     right_point_light = rtl.Diffuse_light(rtu.Color(1, 1, 1))
     left_point_light = rtl.Diffuse_light(rtu.Color(0.5, 0.5, 0.5))
@@ -211,9 +211,9 @@ def renderMyScene():
     world.add_object(rto.Quad(rtu.Vec3(-2, 3, 1), rtu.Vec3(4, 0, 0), rtu.Vec3(0, 0, 4), upper_golden_yellow))
     world.add_object(rto.Quad(rtu.Vec3(-2,-3, 5), rtu.Vec3(4, 0, 0), rtu.Vec3(0, 0,-4), lower_Terracotta))
 
-    world.add_object(rto.Sphere(rtu.Vec3(-1, 0.5, 0), 0.25, sphere_sage_green))
-    world.add_object(rto.Sphere(rtu.Vec3(1, 0.5, 0), 0.25, sphere_lavender))
-    world.add_object(rto.Sphere(rtu.Vec3(0, -1, 0), 1, sphere_white))
+    world.add_object(rto.Sphere(rtu.Vec3(-1, 0.5, 0), 0.25, sphere_red))
+    world.add_object(rto.Sphere(rtu.Vec3(1, 0.5, 0), 0.25, sphere_yellow))
+    world.add_object(rto.Sphere(rtu.Vec3(0, -2, 3.3), 1, sphere_green))
 
     world.add_object(rto.Sphere(rtu.Vec3(4, 0, 0), 0.2, right_point_light))
     world.add_object(rto.Sphere(rtu.Vec3(-4, 0, 0), 0.1, left_point_light))
@@ -222,12 +222,12 @@ def renderMyScene():
 
     renderer = rtren.Renderer(main_camera, intg, world)
     renderer.render()
-    renderer.write_img2png("week05(6)_myScene-v020.png")
+    renderer.write_img2png("week05(6)_myScene-final.png")
 
 
 if __name__ == "__main__":
     # renderQuad()
     # renderQuadLight()
-    renderPointLight()
+    # renderPointLight()
     # renderPointLightShadow()
-    # renderMyScene()
+    renderMyScene()
