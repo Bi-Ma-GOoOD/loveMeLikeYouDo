@@ -269,6 +269,8 @@ def callMat():
     n = Shininess
    
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_a)
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_d_front)
+    glMaterialfv(GL_BACK, GL_DIFFUSE, mat_d_back)
     
     #Default of checkbox is true
     #true is mean checkbox is checked
@@ -276,8 +278,6 @@ def callMat():
     if two_side == True:
         # glLightModelfv(GL_LIGHT_MODEL_TWO_SIDE, mat_d_back)
         glLightModelfv(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE)
-        glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_d_front)
-        glMaterialfv(GL_BACK, GL_DIFFUSE, mat_d_back)
     else:
         # mat_d_back = (0, 0, 0)
         glLightModelfv(GL_LIGHT_MODEL_TWO_SIDE, GL_FALSE)
