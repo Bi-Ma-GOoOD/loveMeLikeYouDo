@@ -67,7 +67,7 @@ def gl_init_models():
     glEnable(GL_DEPTH_TEST)
     glShadeModel(GL_SMOOTH)
 
-    df = pd.read_csv("C:\\b6510451115\\models\\bunny_uv.tri", sep='\s+', 
+    df = pd.read_csv("D:\\AB-BiMaGOoOD\\Tob-taun\\3rdYears\\Y3T1\\ICG\\models\\bunny_uv.tri", sep='\s+', 
                      comment='#', header=None, dtype=np.float32)
     centroid = df.values[:, 0:3].mean(axis=0)
     bbox = df.values[:, 0:3].max(axis=0) - df.values[:, 0:3].min(axis=0)
