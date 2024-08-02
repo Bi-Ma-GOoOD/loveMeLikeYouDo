@@ -49,7 +49,7 @@ class Integrator():
                     if not occlusion_obj:
                         # accumulate all unoccluded light
                         Le = Le + (light.material.emitting() * (1/dis_from_hit_to_light))
-            # return (Le * sinfo.attenuation_color) + self.compute_scattering(rtr.Ray(hinfo.getP(), sinfo.scattered_ray.getDirection()), scene, maxDepth-1) * sinfo.attenuation_color
-            return Le + self.compute_scattering(rtr.Ray(hinfo.getP(), sinfo.scattered_ray.getDirection()), scene, maxDepth-1) * sinfo.attenuation_color
+            # return the color
+            return (Le * sinfo.attenuation_color) + self.compute_scattering(rtr.Ray(hinfo.getP(), sinfo.scattered_ray.getDirection()), scene, maxDepth-1) * sinfo.attenuation_color
         return scene.getBackgroundColor()
 
