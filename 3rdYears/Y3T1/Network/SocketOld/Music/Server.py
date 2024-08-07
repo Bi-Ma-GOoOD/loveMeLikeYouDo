@@ -5,9 +5,19 @@ SERVER_HOST = '127.0.0.1'
 SERVER_PORT = 12000
 i = 0
 
-# List of available songs
-songs = ["song1", "song2", "song3", "song4"]
-show = ["lala", "lulu", "lele", "lolo"]
+# Dictionary of available songs
+dic_songs = {
+    "1": "Shape of You by Ed Sheeran",
+    "2": "Despacito by Luis Fonsi",
+    "3": "Uptown Funk by Mark Ronson",
+    "4": "Perfect by Ed Sheeran",
+    "5": "Closer by The Chainsmokers",
+    "6": "Thinking Out Loud by Ed Sheeran",
+    "7": "Sorry by Justin Bieber",
+    "8": "See You Again by Wiz Khalifa",
+    "9": "Roar by Katy Perry",
+    "10": "Dark Horse by Katy Perry"
+}
 
 # Create a TCP/IP socket
 server_socket = socket(AF_INET, SOCK_STREAM)
@@ -26,13 +36,14 @@ def handle_client(client_socket):
     try:
         while True:
             # Send the list of songs to the client
-            client_socket.sendall("\n".join(show).encode())
+            song_list = "\n".join([f"{key}: {value}" for key, value in dic_songs.items()])
+            client_socket.sendall(song_list.encode())
 
             # Receive the song choice from the client
-            choice = client_socket.recv(1024).decode()
-            # choice = recv_choice.lower()
-            if choice.lower() in songs:
-                response = f"You chose {choice}. Enjoy the music!"
+            choice = client_socket.recv(1024).decode().strip()
+            if choice in dic_songs:
+                song_name = dic_songs[choice]
+                response = f"You chose {song_name}. Enjoy the music!"
             else:
                 response = "Invalid choice. Please choose a valid song."
             
@@ -40,16 +51,13 @@ def handle_client(client_socket):
     except Exception as e:
         print(f"Error handling client: {e}")
     finally:
-        print(f"Client {numberClient} disconnected.")
-        i = i - 1
+        print(f"Client at address {client_address[1]} disconnected.")
         # Close the client socket
         client_socket.close()
 
 while True:
     # Accept a new client connection
     client_socket, client_address = server_socket.accept()
-    print(f"Accepted connection from client {i} -> {client_address}")
-    # Increment the number of clients
-    i = i + 1
+    print(f"Accepted connection from {client_address}")
     # Handle the client in a separate function
     handle_client(client_socket)

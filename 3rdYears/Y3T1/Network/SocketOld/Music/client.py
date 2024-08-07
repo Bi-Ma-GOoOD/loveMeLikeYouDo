@@ -10,15 +10,15 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Connect to the server
 client_socket.connect((SERVER_HOST, SERVER_PORT))
 
-try :
-    while True :
+try:
+    while True:
         # Receive the list of songs from the server
         song_list = client_socket.recv(1024).decode()
-        print("Available songs:")
+        print("- - - - - song's list - - - - -")
         print(song_list)
-
+        
         # Choose a song
-        choice = input("Enter the name of the song you want to listen to: ")
+        choice = input("Enter the number of the song you want to listen to (or 'exit' to disconnect): ").strip()
         if choice.lower() == 'exit':
             break
         client_socket.sendall(choice.encode())
@@ -26,6 +26,7 @@ try :
         # Receive the server's response
         response = client_socket.recv(1024).decode()
         print(response)
-finally :
+finally:
     # Close the socket
     client_socket.close()
+    print("Disconnected from server.")
