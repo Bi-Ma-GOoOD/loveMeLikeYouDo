@@ -21,7 +21,7 @@ LYRICS_FILES = {
     5: "D:\\AB-BiMaGOoOD\\Tob-taun\\3rdYears\\Y3T1\\Network\\SERVER\\SweatherWeather.txt"
 }
 # Check song count for modified
-SONG_COUNT = [0, 0, 0, 0, 0]
+SONG_COUNT = [0, 0, 0, 0, 0, 0]
 
 def send_file(client_socket, file_path, new_file_name):
     try:
@@ -82,6 +82,12 @@ def handle_client_connection(client_socket, addr):
                         new_file_name = client_socket.recv(1024).decode('utf-8')
                         print(f"BiMaGOoOD : Received new file name: {new_file_name} from {addr[1]}")
                         send_file(client_socket, file_path, new_file_name)
+                    else :
+                        client_socket.send(b"SERVER : Goodbye!")
+                        client_socket.close()
+                        logout_time = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
+                        print(f"BiMaGOoOD : (DISCONNECTION) - Client from address {addr[1]} was disconnected at \t\t{logout_time}.")
+                        break
                 else:
                     print(f"BiMaGOoOD : Song not found from {addr[1]}")
                     response = "Song not found"
@@ -93,7 +99,8 @@ def handle_client_connection(client_socket, addr):
                 print(f"BiMaGOoOD : (DISCONNECTION) - Client from address {addr[1]} was disconnected at \t\t{logout_time}.")
                 break
             else:
-                client_socket.send(b"Invalid command. Please enter 'I', 'Y', or 'N'.")
+                print(f"BiMaGOoOD : Status code 404 - Error command\nBiMaGOoOD : Invalid command from {addr[1]}")
+                # client_socket.send(b"Invalid command. Please enter 'I', 'Y', or 'N'.")
     except ConnectionResetError:
         print(f"BiMaGOoOD : (DISCONNECTION) - Client from address {addr[1]} was disconnected unexpectedly.")
 

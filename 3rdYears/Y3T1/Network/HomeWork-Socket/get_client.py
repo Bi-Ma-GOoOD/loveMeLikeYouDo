@@ -42,7 +42,7 @@ def connect_to_server():
             print(response)
             
             print("NOTE : If you want to load file from server to you, when download is complete, your client will be disconnected automically.")
-            lyrics_choice = input("Enter your choice (P for prompt, C for file): ")
+            lyrics_choice = input("Enter your choice (P for prompt, C for file, E for exit): ")
             client.send(lyrics_choice.encode('utf-8'))
             
             if lyrics_choice == "P":
@@ -58,6 +58,11 @@ def connect_to_server():
                 new_file_name = input("Enter the name of the file to save lyrics: ")
                 client.send(new_file_name.encode('utf-8'))
                 receive_file(client)
+                client.close()
+                break
+            else :
+                response = client.recv(1024).decode('utf-8')
+                print(response)
                 client.close()
                 break
         elif command == "N":
