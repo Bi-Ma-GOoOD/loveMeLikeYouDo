@@ -11,6 +11,7 @@ def resize(window, w, h):
 
 def refresh(window):
     glColor3f(1.0, 1.0, 1.0)
+    glTexEnvf(GL_TEXTURE_2D, GL_TEXTURE_ENV_MODE, GL_REPLACE)
 
     glClearColor(1, 1, 1, 1)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
