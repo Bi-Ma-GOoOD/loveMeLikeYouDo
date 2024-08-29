@@ -241,12 +241,16 @@ class CookTorrance(Material):
         denom = (h_dot_n2 * (a2 - 1.0) + 1.0)
         return a2 / (math.pi * denom * denom)
     
+    def geometry_schlick_ggx(fCosine, froughness, n_dot_v):
+        r = 0.5 + 0.5 * froughness
+        k = (r * r) / 2.0
+        denom = n_dot_v * (1.0 - k) + k
+        return max(n_dot_v, 0.0) / denom
+    
     def geometry_smith(self, v_dot_n, l_dot_n, froughness):
-        def geometry_schlick_ggx(fCosine, froughness):
-            k = math.pow(froughness + 1.0, 2) / 8.0
-            return fCosine / (fCosine * (1.0 - k) + k)
-
-        return geometry_schlick_ggx(v_dot_n, froughness) * geometry_schlick_ggx(l_dot_n, froughness)
+        g1_v = self.geometry_schlick_ggx(v_dot_n, froughness)
+        g1_l = self.geometry_schlick_ggx(l_dot_n, froughness)
+        return g1_v * g1_l
 
     def scattering(self, rRayIn, hHinfo):
         reflected_direction = -hHinfo.getNormal()
@@ -264,10 +268,12 @@ class CookTorrance(Material):
         n_vector = hHinfo.getNormal()
         half_way_vector = rtu.Vec3.unit_vector(halfvector(-rView.getDirection(), rLight.getDirection()))
         view_direction_vector = rtu.Vec3.unit_vector(-rView.getDirection())
-        v_dot_n = max(0.0, rtu.Vec3.dot_product(view_direction_vector, n_vector))
-        n_dot_l = max(0.0, rtu.Vec3.dot_product(n_vector, rLight.getDirection()))
-        h_dot_n = max(0.0, rtu.Vec3.dot_product(half_way_vector, n_vector))
-        v_dot_h = max(0.0, rtu.Vec3.dot_product(view_direction_vector, half_way_vector))
+        v_dot_n = rtu.Interval(0, 1).clamp(max(0.0, rtu.Vec3.dot_product(view_direction_vector, n_vector)))
+        n_dot_l = rtu.Interval(0, 1).clamp(max(0.0, rtu.Vec3.dot_product(n_vector, rLight.getDirection())))
+        h_dot_n = rtu.Interval(0, 1).clamp(max(0.0, rtu.Vec3.dot_product(half_way_vector, n_vector)))
+        v_dot_h = rtu.Interval(0, 1).clamp(max(0.0, rtu.Vec3.dot_product(view_direction_vector, half_way_vector)))
+
+        # f0 = (self.IOR * math.pow(self.roughness, 2))
         # call fresnel schlick
         F = schlick(v_dot_h, self.IOR)
         # call normal distribution
@@ -275,9 +281,9 @@ class CookTorrance(Material):
         # call geometry
         G = self.geometry_smith(v_dot_n, n_dot_l, self.roughness)
         # calculate diffuse color
-        full_cook = (F * D * G) / max(4 * v_dot_n * n_dot_l, 1e-8)
+        full_cook = (F * D * G) / max((4.0 * (v_dot_n * n_dot_l)), 1e-5)
         diff_color = rtu.Color(self.color_albedo.r(), self.color_albedo.g(), self.color_albedo.b()) * self.kd * (1.0/math.pi)
         spec_color = rtu.Color(self.color_albedo.r(), self.color_albedo.g(), self.color_albedo.b()) * self.ks * full_cook
-
+        
         return diff_color + spec_color
     
