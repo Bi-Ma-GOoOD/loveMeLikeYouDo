@@ -230,7 +230,7 @@ def init_model():
     print("Centroid:", centroid)
     print("BBox:", bbox)
     start_time = time.time() - 1e-4
-    create_shaders()
+    # create_shaders()
 
 def main():
     global window
