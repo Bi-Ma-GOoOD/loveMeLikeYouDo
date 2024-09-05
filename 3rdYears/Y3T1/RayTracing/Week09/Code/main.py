@@ -13,8 +13,8 @@ def renderBlinn():
     main_camera.aspect_ratio = 16.0/9.0
     main_camera.img_width = 480
     main_camera.center = rtu.Vec3(0,0,0)
-    main_camera.samples_per_pixel = 200
-    main_camera.max_depth = 10
+    main_camera.samples_per_pixel = 5
+    main_camera.max_depth = 5
     main_camera.vertical_fov = 60
     main_camera.look_from = rtu.Vec3(-2, 2, 1)
     main_camera.look_at = rtu.Vec3(0, 0, -1)
@@ -46,12 +46,12 @@ def renderBlinn():
     intg = rti.Integrator(bSkyBG=True)
     # render by Khan
     renderer = rtren.Renderer(main_camera, intg, world)
-    renderer.render()
-    renderer.write_img2png('week09_nojittered-v002.png')    
+    # renderer.render()
+    # renderer.write_img2png('week09_nojittered-v002.png')    
     
     # render by Nink
-    # renderer.render_jittered()
-    # renderer.write_img2png('week09_jitter_fs5-v009.png')    
+    renderer.render_jittered()
+    renderer.write_img2png('week09_jitter_fs5-v010.png')    
 
 
 if __name__ == "__main__":

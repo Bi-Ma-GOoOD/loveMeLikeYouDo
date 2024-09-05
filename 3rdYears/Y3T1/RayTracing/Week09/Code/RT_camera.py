@@ -95,6 +95,8 @@ class Camera:
         return rtr.Ray(ray_origin, ray_direction)
     
     def get_jittered_ray(self, i, j, s_i, s_j):
+        """ self.pixel_du = self.viewport_u / self.img_width
+            self.pixel_dv = self.viewport_v / self.img_height """
         pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
         pixel_sample = pixel_center + self.pixel_sample_square(s_i, s_j, self.pixel_du, self.pixel_dv) * 0.5
 
