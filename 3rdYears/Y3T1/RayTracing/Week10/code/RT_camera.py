@@ -66,7 +66,7 @@ class Camera:
         # formula = aperture-diameter = D / f-number
         # D = focal-length
         # f-number = get_aperture()
-        aperture_diameter = self.Lens.get_focus_dist() / (self.Lens.get_aperture() * 2.0)
+        aperture_diameter = self.Lens.get_focus_dist() / self.Lens.get_aperture()
         self.aperture_disk_u = self.camera_frame_u * aperture_diameter
         self.aperture_disk_v = self.camera_frame_v * aperture_diameter
 
@@ -121,26 +121,26 @@ class Camera:
         # return rtr.Ray(ray_origin, ray_direction)
         """2. Implement DoF by using an 'aperture' parameter instead of 'defocus_angle'. 
         Do not forget to replace all 'defocus_angle' calls. Render the output with 'renderDoF()'"""
-        # pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
-        # pixel_sample = pixel_center + self.pixel_sample_square(self.pixel_du, self.pixel_dv, s_i, s_j) * 0.5
-
-        # ray_origin = self.center
-        # if self.Lens.get_aperture() > 1e-06:
-        #     ray_origin = self.aperture_disk_sample()
-        # ray_direction = pixel_sample - ray_origin
-
-        # return rtr.Ray(ray_origin, ray_direction)
-        """3. Implement Motion blur effect in 'get_jittered_ray()'. Render the output with 'renderMoving()."""
         pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
         pixel_sample = pixel_center + self.pixel_sample_square(self.pixel_du, self.pixel_dv, s_i, s_j) * 0.5
 
         ray_origin = self.center
-        if self.Lens.get_defocus_angle() > 1e-06:
-            ray_origin = self.defocus_disk_sample()
+        if self.Lens.get_aperture() > 1e-06:
+            ray_origin = self.aperture_disk_sample()
         ray_direction = pixel_sample - ray_origin
-        ray_time = rtu.random_double()              # an additional parameter for motion blur
 
-        return rtr.Ray(ray_origin, ray_direction, ray_time)
+        return rtr.Ray(ray_origin, ray_direction)
+        """3. Implement Motion blur effect in 'get_jittered_ray()'. Render the output with 'renderMoving()."""
+        # pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
+        # pixel_sample = pixel_center + self.pixel_sample_square(self.pixel_du, self.pixel_dv, s_i, s_j) * 0.5
+
+        # ray_origin = self.center
+        # if self.Lens.get_defocus_angle() > 1e-06:
+        #     ray_origin = self.defocus_disk_sample()
+        # ray_direction = pixel_sample - ray_origin
+        # ray_time = rtu.random_double()              # an additional parameter for motion blur
+
+        # return rtr.Ray(ray_origin, ray_direction, ray_time)
 
     def random_pixel_in_square(self, vDu, vDv):
         px = -0.5 + rtu.random_double()

@@ -13,7 +13,7 @@ def renderDoF():
     main_camera.aspect_ratio = 16.0/9.0
     main_camera.img_width = 320
     main_camera.center = rtu.Vec3(0,0,0)
-    main_camera.samples_per_pixel = 10
+    main_camera.samples_per_pixel = 50
     main_camera.max_depth = 6
     main_camera.vertical_fov = 60
     main_camera.look_from = rtu.Vec3(-2, 2, 1)
@@ -47,7 +47,7 @@ def renderDoF():
     # ภาพที่จะเอามีชื่อว่า week10_jitter_Aperture-v005.png นะผลลัพธ์จะเหมือนกันกับ week10_jitter_Aperture-v001.png
     renderer.render_jittered()
     # renderer.write_img2png('week10_jitter_Aperture-v011.png')
-    renderer.write_img2png('week10_test_Aperture-v008(1.0).png')
+    renderer.write_img2png('week10_test_Aperture-v015(1.0).png')
     # renderer.render()
     # renderer.write_img2png('week10(2.1)_nojitter_Aperture-v002.png')    
 
@@ -56,7 +56,7 @@ def renderDoF1():
     main_camera.aspect_ratio = 16.0/9.0
     main_camera.img_width = 320
     main_camera.center = rtu.Vec3(0,0,0)
-    main_camera.samples_per_pixel = 10
+    main_camera.samples_per_pixel = 50
     main_camera.max_depth = 6
     main_camera.vertical_fov = 60
     main_camera.look_from = rtu.Vec3(-2, 2, 1)
@@ -65,7 +65,7 @@ def renderDoF1():
 
     defocus_angle = 2.0
     focus_distance = 5.0
-    aperture_radius = 16.0
+    aperture_radius = 32.0
     main_camera.init_camera(defocus_angle, focus_distance, aperture_radius)
     # add objects to the scene
 
@@ -89,7 +89,7 @@ def renderDoF1():
     renderer = rtren.Renderer(main_camera, intg, world)
     # ภาพที่จะเอามีชื่อว่า week10_jitter_Aperture-v005.png นะผลลัพธ์จะเหมือนกันกับ week10_jitter_Aperture-v001.png
     renderer.render_jittered()
-    renderer.write_img2png('week10_test_aperture-v009(16).png')
+    renderer.write_img2png('week10_test_aperture-v015(32).png')
     # renderer.render()
     # renderer.write_img2png('week10(2.1)_nojitter_Aperture-v003.png')    
 
@@ -136,6 +136,6 @@ def renderMoving():
     renderer.write_img2png('week10(3)_moving_Jitter-v002.png')    
 
 if __name__ == "__main__":
-    renderDoF()
+    # renderDoF()
     renderDoF1()
     # renderMoving()
