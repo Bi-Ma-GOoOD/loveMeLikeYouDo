@@ -62,13 +62,11 @@ class Camera:
         self.defocus_disk_u = self.camera_frame_u * defocus_radius
         self.defocus_disk_v = self.camera_frame_v * defocus_radius
 
-        # compute aperture parameters.
-        # formula = aperture-diameter = D / f-number
-        # D = focal-length
-        # f-number = get_aperture()
-        aperture_diameter = self.Lens.get_focus_dist() / self.Lens.get_aperture()
-        self.aperture_disk_u = self.camera_frame_u * aperture_diameter
-        self.aperture_disk_v = self.camera_frame_v * aperture_diameter
+        # compute aperture
+        self.focal_length = (self.look_from - self.look_at).len()
+        aperture_radius = self.focal_length / (self.Lens.get_aperture() * 2.0 * self.viewport_height)
+        self.aperture_disk_u = self.camera_frame_u * aperture_radius
+        self.aperture_disk_v = self.camera_frame_v * aperture_radius
 
     # call right before init_camera()
     def set_Lens(self, fDefocusAngle, fFocusDist, fAperture):
@@ -109,7 +107,7 @@ class Camera:
         return rtr.Ray(ray_origin, ray_direction)
     
     def get_jittered_ray(self, i, j, s_i, s_j):
-        # """1. Implement DoF in 'get_jittered_ray()'. Render the output with 'renderDoF()'."""
+        """1. Implement DoF in 'get_jittered_ray()'. Render the output with 'renderDoF()'."""
         # pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
         # pixel_sample = pixel_center + self.pixel_sample_square(self.pixel_du, self.pixel_dv, s_i, s_j) * 0.5
 
@@ -121,26 +119,26 @@ class Camera:
         # return rtr.Ray(ray_origin, ray_direction)
         """2. Implement DoF by using an 'aperture' parameter instead of 'defocus_angle'. 
         Do not forget to replace all 'defocus_angle' calls. Render the output with 'renderDoF()'"""
-        pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
-        pixel_sample = pixel_center + self.pixel_sample_square(self.pixel_du, self.pixel_dv, s_i, s_j) * 0.5
-
-        ray_origin = self.center
-        if self.Lens.get_aperture() > 1e-06:
-            ray_origin = self.aperture_disk_sample()
-        ray_direction = pixel_sample - ray_origin
-
-        return rtr.Ray(ray_origin, ray_direction)
-        """3. Implement Motion blur effect in 'get_jittered_ray()'. Render the output with 'renderMoving()."""
         # pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
         # pixel_sample = pixel_center + self.pixel_sample_square(self.pixel_du, self.pixel_dv, s_i, s_j) * 0.5
 
         # ray_origin = self.center
-        # if self.Lens.get_defocus_angle() > 1e-06:
-        #     ray_origin = self.defocus_disk_sample()
+        # if self.Lens.get_aperture() > 1e-06:
+        #     ray_origin = self.aperture_disk_sample()
         # ray_direction = pixel_sample - ray_origin
-        # ray_time = rtu.random_double()              # an additional parameter for motion blur
 
-        # return rtr.Ray(ray_origin, ray_direction, ray_time)
+        # return rtr.Ray(ray_origin, ray_direction)
+        """3. Implement Motion blur effect in 'get_jittered_ray()'. Render the output with 'renderMoving()."""
+        pixel_center = self.pixel00_location + (self.pixel_du*i) + (self.pixel_dv*j)
+        pixel_sample = pixel_center + self.pixel_sample_square(self.pixel_du, self.pixel_dv, s_i, s_j) * 0.5
+
+        ray_origin = self.center
+        if self.Lens.get_defocus_angle() > 1e-06:
+            ray_origin = self.defocus_disk_sample()
+        ray_direction = pixel_sample - ray_origin
+        ray_time = rtu.random_double()              # an additional parameter for motion blur
+
+        return rtr.Ray(ray_origin, ray_direction, ray_time)
 
     def random_pixel_in_square(self, vDu, vDv):
         px = -0.5 + rtu.random_double()
@@ -165,6 +163,12 @@ class Camera:
         du = (self.aperture_disk_u * pp.x())
         dv = (self.aperture_disk_v * pp.y())
         return self.center + du + dv
+    # calculate focal length
+    def cal_focal_length(self):
+        vertical_fov_radians = math.radians(self.vertical_fov)
+        sensor_height = self.viewport_height
+        focal_length = sensor_height /2.0 * (math.tan(vertical_fov_radians/2.0))
+        return focal_length
 
 class Lens():
     def __init__(self) -> None:
