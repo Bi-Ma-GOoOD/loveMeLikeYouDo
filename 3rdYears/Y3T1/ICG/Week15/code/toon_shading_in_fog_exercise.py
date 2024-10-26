@@ -19,17 +19,19 @@ edge_color = [0, 0, 0.5]
 diffuse_threshold, specular_threshold, edge_threshold = 0.5, 0.3, 0.3
 scene_vao, shininess, clear_color = None, 50, [0.8, 1.0, 1.0]
 wireframe_on, animation_on, gui_on = False, False, True
+selection_on = False
 
 def draw_gui():
     global clear_color, I, Kd1, Kd2, Ks, edge_color, shininess
     global diffuse_threshold, specular_threshold, edge_threshold
-    global fog_on, fog_start, fog_end, fog_color
+    global fog_on, fog_start, fog_end, fog_color, selection_on
 
     impl.process_inputs()
     imgui.new_frame()                 # Start the Dear ImGui frame 
     imgui.set_next_window_position(win_w-300, 10, imgui.FIRST_USE_EVER)
     imgui.begin("Control")            # Create a window
     imgui.push_item_width(100)
+    _, selection_on = imgui.checkbox("Per-Fragment (Phong Shading)", selection_on)
     imgui.text("Linear Fog")
     _, fog_on = imgui.checkbox("Enabled", fog_on)
     imgui.same_line()
@@ -88,6 +90,7 @@ def refresh(window):
     glUniform1f(glGetUniformLocation(prog_id, "specular_threshold"), specular_threshold)
     glUniform1f(glGetUniformLocation(prog_id, "edge_threshold"), edge_threshold)
     glUniform1i(glGetUniformLocation(prog_id, "fog_on"), fog_on)    
+    glUniform1i(glGetUniformLocation(prog_id, "selection_on"), selection_on)   
     glUniform1f(glGetUniformLocation(prog_id, "fog_start"), fog_start)
     glUniform1f(glGetUniformLocation(prog_id, "fog_end"), fog_end)        
     glUniform3fv(glGetUniformLocation(prog_id, "fog_color"), 1, fog_color)     
@@ -203,12 +206,13 @@ in float smooth_distance;
 uniform vec3 Kd1, Kd2, Ks, edge_color, fog_color, I, light_pos, eye_pos;
 uniform float shininess, fog_start, fog_end;
 uniform float diffuse_threshold, specular_threshold, edge_threshold;
-uniform bool fog_on;
+uniform bool fog_on, selection_on;
 
 out vec4 frag_color;
 
 void main() 
 {
+    vec3 Ka = vec3(1.0, 0.71, 0.76);
     vec3 L = normalize(light_pos - smooth_position);
     vec3 V = normalize(eye_pos - smooth_position);
     vec3 N = normalize(smooth_normal);
@@ -222,15 +226,35 @@ void main()
     vec3 specular_color = (specular > specular_threshold) ? Ks : vec3(0);
     
     edge = (edge < edge_threshold) ? 1.0 : 0.0;
+
+    vec3 ambient = Ka * I;
+    vec3 diffuse_phong = Kd1 * max(dot(N, L), 0) * I;
+    vec3 specular_phong = Ks * pow(max(dot(V, R), 0), shininess) * I;
+
+    if (dot(N, L) < 0){
+        specular_phong = vec3(0, 0, 0);    
+    }
+    
+    vec3 phong_color = ambient + diffuse_phong + specular_phong;
     
     vec3 shade_toon_color = vec4(mix(diffuse_color + specular_color, edge_color, edge), 1).xyz;
     
-    if (fog_on){
-        float fog_scale = 1.0 - (fog_end - smooth_distance)/(fog_end - fog_start);
-        fog_scale = clamp(fog_scale, 0.0, 0.95);
-        frag_color = mix(vec4(shade_toon_color, 1), vec4(fog_color, 1), fog_scale);
+    if (selection_on){
+        if(fog_on){
+            float fog_scale = 1.0 - (fog_end - smooth_distance)/(fog_end - fog_start);
+            fog_scale = clamp(fog_scale, 0.0, 0.95);
+            frag_color = mix(vec4(phong_color, 1), vec4(fog_color, 1), fog_scale);
+        }else{
+            frag_color = vec4(phong_color, 1);
+        }
     }else{
-        frag_color = vec4(shade_toon_color, 1);
+        if(fog_on){
+            float fog_scale = 1.0 - (fog_end - smooth_distance)/(fog_end - fog_start);
+            fog_scale = clamp(fog_scale, 0.0, 0.95);
+            frag_color = mix(vec4(shade_toon_color, 1), vec4(fog_color, 1), fog_scale);
+        }else{
+            frag_color = vec4(shade_toon_color, 1);
+        }
     }
 }
 '''

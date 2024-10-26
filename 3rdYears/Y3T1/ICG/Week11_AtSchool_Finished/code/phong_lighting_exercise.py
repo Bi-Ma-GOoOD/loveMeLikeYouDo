@@ -220,14 +220,19 @@ layout(location = 2) in vec3 color;
 layout(location = 3) in vec2 uv;
 
 uniform mat4 model_mat, view_mat, proj_mat;
+uniform vec3 eye_pos;
+uniform vec3 light_intensity;
 
-out vec3 smooth_position, smooth_normal;
+out vec3 smooth_position;
+out vec3 smooth_normal, smooth_light_intensity, smooth_eye_pos;
 
 void main()
 {
     gl_Position = proj_mat * view_mat * model_mat * vec4(position, 1);
     smooth_position = (model_mat * vec4(position, 1)).xyz;
     smooth_normal = (transpose(inverse(model_mat)) * vec4(normal, 0)).xyz;
+    smooth_light_intensity = (model_mat * vec4(light_intensity, 1)).xyz;
+    smooth_eye_pos = (model_mat * vec4(eye_pos, 1)).xyz;
 }'''
     p_frag_code = '''
 #version 140
@@ -237,18 +242,18 @@ uniform vec3 Ka, Kd, Ks;
 uniform float shininess;
 uniform vec3 eye_pos;
 
-in vec3 smooth_position, smooth_normal;
+in vec3 smooth_position, smooth_normal, smooth_eye_pos, smooth_light_intensity;
 
 void main()
 {
     vec3 L = normalize(light_pos - smooth_position);
-    vec3 V = normalize(eye_pos - smooth_position);
+    vec3 V = normalize(smooth_eye_pos - smooth_position);
     vec3 N = normalize(smooth_normal);
     vec3 R = 2 * dot(L, N) * N - L;
 
-    vec3 ambient = Ka * light_intensity;
-    vec3 diffuse = Kd * max(dot(N, L), 0) * light_intensity;
-    vec3 specular = Ks * pow(max(dot(V, R), 0), shininess) * light_intensity;
+    vec3 ambient = Ka * smooth_light_intensity;
+    vec3 diffuse = Kd * max(dot(N, L), 0) * smooth_light_intensity;
+    vec3 specular = Ks * pow(max(dot(V, R), 0), shininess) * smooth_light_intensity;
 
     if (dot(N, L) < 0){
         specular = vec3(0, 0, 0);    
