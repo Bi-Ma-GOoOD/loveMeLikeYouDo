@@ -1,0 +1,10 @@
+im  = imread('chest.jpg');
+im = rgb2gray(im);
+j = imadjust(im, [0.08, 0.51], [0.0, 1.0]);
+k = histeq(im);
+i = adapthisteq(im);
+% show 
+% figure('Name', 'ORIGINAL');imshow(im);
+% figure('Name', 'IMADJUST');imshow(j);
+% figure('Name', 'HISTEQ');imshow(k);
+% figure('Name', 'ADAPTHISTEQ');imshow(i);
