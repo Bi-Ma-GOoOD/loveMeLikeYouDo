@@ -36,4 +36,4 @@ o3 = medfilt2(output_image(:, :, 3), [4, 4]);
 out = cat(3, o1, o2, o3);
 subplot(1, 3, 3);
 imshow(out);
-title('Unsharp - medfilt2');a
+title('Unsharp - medfilt2');
