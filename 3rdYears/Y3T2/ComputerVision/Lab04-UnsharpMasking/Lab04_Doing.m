@@ -29,7 +29,7 @@ b3 = medfilt2(im(:, :, 3), [11, 11]);
 blur_image = cat(3, b1, b2, b3);
 edge_image = im - blur_image;
 % 4.5 for medfilt2
-output_image = original + (4.7 * edge_image); 
+output_image = im + (4.7 * edge_image); 
 o1 = medfilt2(output_image(:, :, 1), [4, 4]);
 o2 = medfilt2(output_image(:, :, 2), [4, 4]);
 o3 = medfilt2(output_image(:, :, 3), [4, 4]);
