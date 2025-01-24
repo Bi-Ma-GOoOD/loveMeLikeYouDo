@@ -1,0 +1,30 @@
+img = imread('lymphomalplzhang03_shade.jpg');
+% convert rgb-image to gray image
+gray_img = rgb2gray(img);
+% Find shade correction (Flat-field Correction) 
+shadding_pattern = imgaussfilt(gray_img, 195);
+h = double(shadding_pattern);
+g = double(gray_img);
+f = g ./ h;
+% Find threshoding value
+level = graythresh(f);
+disp(level);
+BW = imbinarize(f, 0.89);
+BW = ~BW;
+
+subplot(2, 2, 1);
+imshow(img);
+title('Original Image');
+
+subplot(2, 2, 2);
+imshow(f);
+title('Shade Correction');
+
+subplot(2, 2, 3);
+imshow(BW);
+title('Blackkk');
+
+subplot(2, 2, 4);
+draw = drawBoundary(img, BW);
+imshow(draw);
+title('Drawboundary');
