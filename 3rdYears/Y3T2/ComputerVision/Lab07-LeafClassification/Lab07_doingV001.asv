@@ -27,11 +27,21 @@ for i = 1:numImages
     BW_fill = imfill(BW, "holes");
 
     % Step 02: Feature Extraction
-    STATS = regionprops(BW_fill, 'Area', 'Circularity', 'Eccentricity');
+    STATS = regionprops(BW_fill, 'Area', 'Circularity', 'Perimeter', 'ConvexHull');
+    % Compute Convex Hull Perimeter
+[k, convexHullPoints] = convhull(STATS.ConvexHull(:,1), STATS.ConvexHull(:,2));
+convexPerimeter = sum(sqrt(sum(diff(convexHullPoints).^2, 2))); % Compute convex hull perimeter
+
+% Compute Convexity
+if STATS.Perimeter > 0
+    Convexity = convexPerimeter / STATS.Perimeter;
+else
+    Convexity = 0; % Avoid division by zero
+end
 
     feature_vector_train(i, 1) = STATS.Area;
     feature_vector_train(i, 2) = STATS.Circularity;
-    feature_vector_train(i, 3) = STATS.Eccentricity;
+    feature_vector_train(i, 3) = Convexity;
 end
 
 % Test Part
@@ -63,11 +73,12 @@ for i = 1:numImages
     BW_fill = imfill(BW, "holes");
 
     % Step 02: Feature Extraction
-    STATS = regionprops(BW_fill, 'Area', 'Circularity', 'Eccentricity');
+    STATS = regionprops(BW_fill, 'Area', 'Circularity', 'Perimeter', 'ConvexHull');
+    Convexity = perimeter(STATS.ConvexHull)/perimeter;
 
     feature_vector_test(i, 1) = STATS.Area;
     feature_vector_test(i, 2) = STATS.Circularity;
-    feature_vector_test(i, 3) = STATS.Eccentricity;
+    feature_vector_test(i, 3) = Convexity;
 end
 
 % Step03: Classification
@@ -79,7 +90,5 @@ load('testLabel.mat');
 predictedLabels = predict(Mdl,feature_vector_test);
 table(testLabel(:),predictedLabels (:),'VariableNames',{'TrueLabels','PredictedLabels'})
 
-% Confusion Matrix
-confusionchart(testLabel, predictedLabels);
 
 
