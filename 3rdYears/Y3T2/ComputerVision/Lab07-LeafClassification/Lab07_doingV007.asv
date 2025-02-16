@@ -1,0 +1,118 @@
+%% Part: Train
+% Load Training Labels
+load('trainLabel.mat');
+numTrain = length(trainLabel);
+feature_member = 8;
+feature_vector_train = zeros(numTrain, feature_member);
+
+% Set Paths
+trainPath = 'D:\AB-BiMaGOoOD\Tob-taun\3rdYears\Y3T2\ComputerVision\Lab07-LeafClassification\trainset\';
+
+% Process Training Images
+for i = 1:numTrain
+    filename_train = fullfile(trainPath, [num2str(i) '.jpg']);
+    im_train = imread(filename_train);
+    grayImage_train = rgb2gray(im_train);
+
+    % Reduce illumination effects
+    shadePattern_train = imboxfilt(grayImage_train, 51);  
+    f_train = double(grayImage_train) ./ double(shadePattern_train);% f = gray:g / shadding:h
+    % subplot(1, 3, 1);
+    % imshow(outpic);
+    
+    % Apply Gaussian filter
+    gauss_im_train = imgaussfilt(f_train, 5);
+    % subplot(1, 3, 2);
+    % imshow(gauss_im);
+    
+    % Binarization & Morphological Processing
+    level_train = graythresh(gauss_im_train);
+    BW_train = ~imbinarize(gauss_im_train, level_train);
+    BW_train = imfill(BW_train, 'holes');
+    % subplot(1, 3, 3);
+    % imshow(bw);
+
+    % Extract Features
+    stats_train = regionprops(BW_train, 'Perimeter', 'Area', 'Eccentricity', 'MajorAxisLength', 'MinorAxisLength', 'Orientation',...
+        'ConvexArea','Solidity');
+    if ~isempty(stats_train)
+        % Select the largest region
+        [~, maxIdx_train] = max([stats_train.Perimeter]);
+        stats_train = stats_train(maxIdx_train);
+        
+        featureVectorTrain = [stats_train.Perimeter, stats_train.Area, stats_train.Eccentricity, stats_train.Solidity,...
+                         stats_train.MajorAxisLength, stats_train.MinorAxisLength, stats_train.Orientation,...
+                         stats_train.ConvexArea];
+    else
+        featureVectorTrain = zeros(1, length(featureVectorTrain));
+    end
+    
+    feature_vector_train(i, :) = featureVectorTrain;
+end
+
+% Normalize Features
+meanFeature_train = mean(feature_vector_train, 1);
+stdFeature_train = std(feature_vector_train, 1);
+feature_vector_train = (feature_vector_train - meanFeature_train) ./ (stdFeature_train + eps); % Avoid division by zero
+
+% Train Classifier
+Mdl = fitcecoc(feature_vector_train, trainLabel);
+
+%% Part: Test
+% Load Test Labels
+load('testLabel.mat');
+numTest = length(testLabel);
+feature_vector_test = zeros(numTest, feature_member);
+
+testPath = 'D:\AB-BiMaGOoOD\Tob-taun\3rdYears\Y3T2\ComputerVision\Lab07-LeafClassification\testset\';
+
+% Process Test Images
+for i = 1:numTest
+    filename_test = fullfile(testPath, [num2str(i) '.jpg']);
+    im_test = imread(filename_test);
+    grayImage_test = rgb2gray(im_test);
+
+    % Reduce illumination effects
+    shadePattern_test = imboxfilt(grayImage_test, 51);
+    f_test = double(grayImage_test) ./ double(shadePattern_test);
+
+    % Apply Gaussian filter
+    gauss_im_test = imgaussfilt(f_test, 5);
+
+    % Binarization & Morphological Processing
+    level_test = graythresh(gauss_im_test);
+    BW_test = ~imbinarize(gauss_im_test, level_test);
+    BW_test = imfill(BW_test, 'holes');
+
+    % Extract Features
+    stats_test = regionprops(BW_train, 'Perimeter', 'Area', 'Eccentricity', 'MajorAxisLength', 'MinorAxisLength', 'Orientation',...
+        'ConvexArea','Solidity');
+    if ~isempty(stats_test)
+        % Select the largest region
+        [~, maxIdx_test] = max([stats_test.Con]);
+        stats_test = stats_test(maxIdx_test);
+        
+        featureVectorTest = [stats_test.Perimeter, stats_test.Area, stats_test.Eccentricity, stats_test.Solidity,...
+                         stats_test.MajorAxisLength, stats_test.MinorAxisLength, stats_test.Orientation,...
+                         stats_test.ConvexArea];
+    else
+        featureVectorTest = zeros(1, length(featureVectorTest));
+    end
+    
+    feature_vector_train(i, :) = featureVectorTest;
+end
+
+% Normalize Test Features
+feature_vector_test = (feature_vector_test - meanFeature_train) ./ (stdFeature_train + eps);
+
+% Predict Labels
+predictedLabels = predict(Mdl, feature_vector_test);
+
+% Display Results
+resultsTable = table(testLabel(:), predictedLabels(:), 'VariableNames', {'TrueLabels', 'PredictedLabels'});
+disp(resultsTable);
+
+% Confusion Matrix
+figure(3);
+cm = confusionchart(testLabel, predictedLabels);
+cm.Title = 'Confusion Matrix - Leaf Classification';
