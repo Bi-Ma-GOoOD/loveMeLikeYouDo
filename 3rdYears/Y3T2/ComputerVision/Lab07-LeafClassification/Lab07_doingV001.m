@@ -26,9 +26,9 @@ for i = 1:numImages
 
     % Use imfill for patch hole for post-processing
     BW_fill = imfill(BW, "holes");
-    % figure(1);
-    % subplot(5, 5, i);
-    % imshow(BW_fill);
+    figure(1);
+    subplot(5, 5, i);
+    imshow(BW_fill);
 
     % Step 02: Feature Extraction
     STATS = regionprops(BW_fill, 'Perimeter', 'Circularity', 'Eccentricity', 'Solidity',...
