@@ -1,0 +1,32 @@
+%% Preprocessing
+image_ref = imread('reference_sm.jpg');
+imageFolder = 'D:\AB-BiMaGOoOD\Tob-taun\3rdYears\Y3T2\ComputerVision\Lab08-findingStarbucks\starbucks35_dataset';
+imageFiles = dir(fullfile(imageFolder, '*.jpg'));
+numImage = numel(imageFiles);
+
+image_ref_gray = rgb2gray(image_ref);
+
+for i = 1:numImage
+    img_get = imread(imageFiles(i).name);
+    img2_gray = rgb2gray(img_get);
+end
+%% Feature Detection
+% Harris corner detection
+points_Harris = detectHarrisFeatures(img2_gray);
+points_Harris_ref = detectHarrisFeatures(image_ref_gray);
+% SURF feature detection
+% points_SURF = detectSURFFeatures(img2_gray);
+% points_SURF_ref = detectSURFFeatures(image_ref_gray);
+% MSER feature detection
+% points_MSER = detectMSERFeatures(img2_gray);
+% points_MSER_ref = detectMSERFeatures(image_ref_gray);
+
+%Display
+figure;
+imshow(img2_gray);
+hold on;
+plot(points_Harris.selectStrongest(100));
+title('Detected Harris Features');
+%% Feature Description
+% Extract features using Harris
+[features, validPoints] = extractFeatures()
