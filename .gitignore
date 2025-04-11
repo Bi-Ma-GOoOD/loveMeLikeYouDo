@@ -1,1 +1,4 @@
+# Ignore file .exe
 **/*.exe
+# Ignore dataset starbucks35_dataset
+starbucks35_dataset/
