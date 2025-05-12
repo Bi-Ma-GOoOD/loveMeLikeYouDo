@@ -1,0 +1,58 @@
+imageFolder = 'D:\AB-BiMaGOoOD\Tob-taun\3rdYears\Y3T2\ComputerVision\Lab05-ColorClustering';
+imageFiles = dir(fullfile(imageFolder, '*.jpg'));
+numImages = numel(imageFiles);
+%Step 1: Feature Extraction
+feature_vector = [];
+% for all input image
+for i = 1:numImages
+    img = imread(imageFiles(i).name);
+    % change img to hsv image to look for color except color background
+    hsv_img = rgb2hsv(img);
+    % get saturation to seperate background
+    s = hsv_img(:, :, 2);
+    % Find a set of banana pixels in an image
+    check = find(s > 0.3);
+    % Separate R, G, B channels
+    Red = img(:, :, 1);
+    Green = img(:, :, 2);
+    Blue = img(:, :, 3);
+    
+    Red = double(Red);
+    Green = double(Green);
+    Blue = double(Blue);
+    
+    % Normalize the RGB values
+    sum_rgb = Red + Green + Blue; 
+    realRed = Red ./ sum_rgb;  
+    realGreen = Green ./ sum_rgb;  
+    realBlue = Blue ./ sum_rgb; 
+    
+    realBlue = double(realBlue);
+    realGreen = double(realGreen);
+    realRed = double(realRed);
+    
+    % Compute the mean of the normalized color features for banana pixels
+    meanNormR = mean(realRed(check));
+    meanNormG = mean(realGreen(check));
+    meanNormB = mean(realBlue(check));
+    
+    % Change data type to double
+    meanNormR = double(meanNormR);
+    meanNormG = double(meanNormG);
+    meanNormB = double(meanNormB);
+
+    newMeanR = mean(meanNormR);
+    newMeanG = mean(meanNormG);
+    newMeanB = mean(meanNormB);
+
+    feature_vector(i,1) = newMeanR;
+    feature_vector(i,2) = newMeanG;
+    feature_vector(i,3) = newMeanB;
+end
+% Step 2: Banana Ripeness Clustering
+Z = linkage(feature_vector, 'complete', 'euclidean');
+c = cluster(Z, 'maxclust', 4);
+
+% Display clustering result
+disp(c);
+scatter3(feature_vector(:,1), feature_vector(:,2), feature_vector(:,3), 240, c, 'fill');

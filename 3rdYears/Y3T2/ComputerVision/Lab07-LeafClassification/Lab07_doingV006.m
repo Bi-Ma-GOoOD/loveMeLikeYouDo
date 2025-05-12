@@ -1,0 +1,135 @@
+%% Part: Train
+train_file = 'D:\AB-BiMaGOoOD\Tob-taun\3rdYears\Y3T2\ComputerVision\Lab07-LeafClassification\trainset\';
+imageFiles_train = dir(fullfile(train_file, '*.jpg')); % List all JPG files
+% Load Training Labels
+load('trainLabel.mat');
+numImages_train = length(trainLabel);
+
+feature_vector_train = zeros(numImages_train, 6);
+
+for i = 1:numImages_train
+    % Construct the full file path
+    imgPath = fullfile(train_file, imageFiles_train(i).name); 
+    img = imread(imgPath); % Read the image using the full path
+
+    % Step 01: Shape Extraction
+    gray_image = rgb2gray(img);
+
+    shadding_pattern = imgaussfilt(gray_image, 550);
+    h = double(shadding_pattern);
+    g = double(gray_image);
+    f = g ./ h;
+    % figure(1);
+    % subplot(1, 3, 1);
+    % imshow(f);
+
+    levelOtsu = graythresh(f);
+    % levelAdap = adaptthresh(f);
+    % disp(level);
+    BW = imbinarize(f, 0.99);
+    BW = ~BW;
+    % subplot(1, 3, 2);
+    % imshow(BW);
+
+
+    % Use imfill for patch hole for post-processing
+    BW_fill = imfill(BW, "holes");
+    % subplot(1, 3, 3);
+    % imshow(BW_fill);
+
+    % Step 02: Feature Extraction
+    % Extract Features from the largest object
+    stats = regionprops(BW_fill, 'Perimeter', 'Area', 'Eccentricity', 'MajorAxisLength', 'MinorAxisLength', 'Orientation');
+    if ~isempty(stats)
+        % Select the largest region
+        [~, maxIdx] = max([stats.Area]);
+        stats = stats(maxIdx);
+        
+        featureVector = [stats.Perimeter, stats.Area, stats.Eccentricity, ...
+                         stats.MajorAxisLength, stats.MinorAxisLength, stats.Orientation];
+    else
+        featureVector = zeros(1, 6);
+    end
+    feature_vector_train(i, :) = featureVector;
+
+end
+
+% Normalize Features
+eps = 1e-5;
+meanFeature = mean(feature_vector_train, 1);
+stdFeature = std(feature_vector_train, 1);
+feature_vector_train = (feature_vector_train - meanFeature) ./ (stdFeature + eps); % Avoid division by zero
+
+% Train Classifier
+load('trainLabel.mat');
+Mdl = fitcecoc(feature_vector_train, trainLabel);
+
+%% Part: Test
+test_file = 'D:\AB-BiMaGOoOD\Tob-taun\3rdYears\Y3T2\ComputerVision\Lab07-LeafClassification\trainset\';
+imageFiles_test = dir(fullfile(test_file, '*.jpg')); % List all JPG files
+% Load Training Labels
+load('testLabel.mat');
+numImages_test = length(testLabel);
+
+feature_vector_test = zeros(numImages_test, 6);
+
+for i = 1:numImages_test
+    % Construct the full file path
+    imgPath_test = fullfile(test_file, imageFiles_test(i).name); 
+    img_test = imread(imgPath_test); % Read the image using the full path
+
+    % Step 01: Shape Extraction
+    gray_image_test = rgb2gray(img_test);
+
+    shadding_pattern_test = imgaussfilt(gray_image_test, 1200);
+    h_test = double(shadding_pattern_test);
+    g_test = double(gray_image_test);
+    f_test = g_test ./ h_test;
+    % figure(2);
+    % subplot(1, 3, 1);
+    % imshow(f_test);
+
+    levelOtsu_test = graythresh(f_test);
+    % levelAdap = adaptthresh(f);
+    % disp(level);
+    BW_test = imbinarize(f_test, 0.99);
+    BW_test = ~BW_test;
+    % subplot(1, 3, 2);
+    % imshow(BW_test);
+
+    % Use imfill for patch hole for post-processing
+    BW_fill_test = imfill(BW_test, "holes");
+    % subplot(1, 3, 3);
+    % imshow(BW_fill_test);
+
+    % Step 02: Feature Extraction
+    % Extract Features from the largest object
+    stats_test = regionprops(BW_fill_test, 'Perimeter', 'Area', 'Eccentricity', 'MajorAxisLength', 'MinorAxisLength', 'Orientation');
+    if ~isempty(stats_test)
+        % Select the largest region
+        [~, maxIdx_test] = max([stats_test.Area]);
+        stats_test = stats_test(maxIdx_test);
+        
+        featureVector_test = [stats_test.Perimeter, stats_test.Area, stats_test.Eccentricity, ...
+                         stats_test.MajorAxisLength, stats_test.MinorAxisLength, stats_test.Orientation];
+    else
+        featureVector_test = zeros(1, 6);
+    end
+    feature_vector_test(i, :) = featureVector_test;
+
+end
+
+% Normalize Test Features
+feature_vector_test = (feature_vector_test - meanFeature) ./ (stdFeature + eps);
+
+% Predict Labels
+predictedLabels = predict(Mdl, feature_vector_test);
+
+% Display Results
+resultsTable = table(testLabel(:), predictedLabels(:), 'VariableNames', {'TrueLabels', 'PredictedLabels'});
+disp(resultsTable);
+
+% Confusion Matrix
+figure(3);
+cm = confusionchart(testLabel, predictedLabels);
+cm.Title = 'Confusion Matrix - Leaf Classification';
